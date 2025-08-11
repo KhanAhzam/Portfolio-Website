@@ -103,10 +103,10 @@ const LandingPage = () => {
         <Experience ExperienceRef_Passed={ExperienceRef} />
 
         {/* Projects */}
-        {/* <Projects ExperienceRef_Passed={ExperienceRef} /> */}
+        <Projects ProjectsRef_Passed={ProjectsRef} />
 
         {/* Contact */}
-        {/* <Contact ExperienceRef_Passed={ExperienceRef} /> */}
+        {/* <Contact ContactRef_Passed={ContactRef} /> */}
 
 
 

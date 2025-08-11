@@ -17,7 +17,7 @@ const Projects = ({ ProjectsRef_Passed }) => {
                 {/* Content */}
                 <div className="my-10 px-16 text-center">
                     <div className="">
-                        HELLO
+                        
                     </div>
                 </div>
 
