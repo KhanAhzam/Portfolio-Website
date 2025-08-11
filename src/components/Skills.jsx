@@ -81,6 +81,7 @@ const Skills = ({ SkillsRef_Passed }) => {
                 {/* Content */}
                 <div className="my-10 px-16 grid grid-cols-4 text-center gap-y-[52px]">
 
+                    {/* Mapping Array */}
                     {skills_Arr.map((item, index) =>
 
                         item.skill_name.toLowerCase() === "more skills" ? (

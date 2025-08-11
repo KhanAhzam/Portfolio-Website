@@ -10,12 +10,16 @@ import Links from '../components/Links'
 import About from '../components/About'
 import Skills from '../components/Skills'
 import Experience from '../components/Experience'
+import Projects from '../components/Projects'
+import Contact from '../components/Contact'
 
 const LandingPage = () => {
 
   const AboutRef = useRef();
   const SkillsRef = useRef();
   const ExperienceRef = useRef();
+  const ProjectsRef = useRef();
+  const ContactRef = useRef();
 
   const ScrollToAbout = () => {
     AboutRef.current?.scrollIntoView({ behavior: 'smooth' }); //auto
@@ -95,8 +99,14 @@ const LandingPage = () => {
         {/* Skills */}
         <Skills SkillsRef_Passed={SkillsRef} />
 
-        {/* Skills */}
+        {/* Experience */}
         <Experience ExperienceRef_Passed={ExperienceRef} />
+
+        {/* Projects */}
+        {/* <Projects ExperienceRef_Passed={ExperienceRef} /> */}
+
+        {/* Contact */}
+        {/* <Contact ExperienceRef_Passed={ExperienceRef} /> */}
 
 
 
