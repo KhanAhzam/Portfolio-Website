@@ -69,6 +69,7 @@ const Experience = ({ ExperienceRef_Passed }) => {
 
                 {/* Content */}
                 <div className="my-10 px-16">
+
                     {Exp_list.map((item, index) => {
                         return <div key={item.key_index} className="relative main_box my-24">
 
@@ -185,6 +186,7 @@ const Experience = ({ ExperienceRef_Passed }) => {
 
                         </div>
                     })}
+                    
                 </div>
 
             </div>
