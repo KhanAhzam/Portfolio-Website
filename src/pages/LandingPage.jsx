@@ -71,16 +71,7 @@ const LandingPage = () => {
             />
           </div>
 
-
-
-
-
-
-
-
-
           {/* Home-Content */}
-          {/* This requires adjustments */}
           <div className="relative home container max-w-[1400px] my-5 mx-auto h-fit px-10 py-16 flex justify-between ">
 
             {/* Text */}
@@ -283,7 +274,10 @@ const LandingPage = () => {
         <Skills SkillsRef_Passed={SkillsRef} />
 
         {/* Experience */}
-        <Experience ExperienceRef_Passed={ExperienceRef} />
+        <Experience
+          ExperienceRef_Passed={ExperienceRef}
+          onScrollToExperience={ScrollToExperience}
+        />
 
         {/* Projects */}
         <Projects ProjectsRef_Passed={ProjectsRef} />

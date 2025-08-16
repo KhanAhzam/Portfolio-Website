@@ -232,7 +232,7 @@ const Skills = ({ SkillsRef_Passed }) => {
                     )}
 
 
-                    {/* Cloud 11 */}
+                    {/* Cloud 15 */}
                     <div className="pointer-events-none absolute inset-0 -z-20"
                         style={{ background: "transparent" }}
                     >
@@ -266,7 +266,7 @@ const Skills = ({ SkillsRef_Passed }) => {
                         </motion.div>
                     </div>
 
-                    {/* Cloud 11 */}
+                    {/* Cloud 14 */}
                     <div className="pointer-events-none absolute inset-0 -z-20"
                         style={{ background: "transparent" }}
                     >
@@ -302,7 +302,6 @@ const Skills = ({ SkillsRef_Passed }) => {
 
 
                 </div>
-
 
                 {/* More Sills Box */}
                 {MoreSkills &&

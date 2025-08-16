@@ -5,7 +5,31 @@ import { motion } from "framer-motion"
 import { IoChevronDown, IoChevronUp } from "react-icons/io5";
 import { PiCertificate } from "react-icons/pi";
 
-const Experience = ({ ExperienceRef_Passed }) => {
+import Cloud1 from "../assets/Clouds/1.jpg";
+import Cloud2 from "../assets/Clouds/2.jpg";
+import Cloud3 from "../assets/Clouds/3.jpg";
+import Cloud4 from "../assets/Clouds/4.jpg";
+import Cloud5 from "../assets/Clouds/5.jpg";
+import Cloud6 from "../assets/Clouds/6.jpg";
+import Cloud7 from "../assets/Clouds/7.jpg";
+import Cloud8 from "../assets/Clouds/Potential1.png";
+import Cloud9 from "../assets/Clouds/Potential2.png";
+import Cloud10 from "../assets/Clouds/Potential3.png";
+import Cloud11 from "../assets/Clouds/Potential4.png";
+import Cloud12 from "../assets/Clouds/Potential5.png";
+import Cloud13 from "../assets/Clouds/Potential6.png";
+import Cloud14 from "../assets/Clouds/dark1.png";
+import Cloud15 from "../assets/Clouds/dark2.png";
+import Cloud16 from "../assets/Clouds/dark3.png";
+import Cloud17 from "../assets/Clouds/dark4.png";
+
+
+
+// DRDO CERTIFICATE ADD
+
+
+
+const Experience = ({ ExperienceRef_Passed, onScrollToExperience }) => {
 
     const Exp_list = [
         {
@@ -22,8 +46,8 @@ const Experience = ({ ExperienceRef_Passed }) => {
                 "Developed backend functionality for a data capture page to store user emails in a cloud database using various backend technologies ensuring secure and reliable data handling.",
                 "Collaborated with a team of developers using version control system GitHub to manage code, conduct reviews, and maintain smooth project workflows."
             ],
-            skills: ["React.js", "Tailwind CSS", "JavaScript", "Node.js", "Express.js", "MongoDB", "Mongoose", "Render", "Figma", "HTML", "CSS", "Git", "Github"]
-            // source: ""
+            skills: ["React.js", "Tailwind CSS", "JavaScript", "Node.js", "Express.js", "MongoDB", "Mongoose", "Render", "Figma", "HTML", "CSS", "Git", "Github"],
+            certi_link: "https://drive.google.com/file/d/1kJxMh8jZsjyBT0hh8_sXKaHqW4HBiKMx/view?usp=drive_link"
         },
         {
             key_index: 2,
@@ -39,8 +63,8 @@ const Experience = ({ ExperienceRef_Passed }) => {
                 "Benchmarked the Groq version, achieving a 75% faster generation time compared to the offline version, significantly improving turnaround time for large documents.",
                 "Implemented secure API key management with environment variables, ensured reproducible installations with `requirements.txt`, and adapted the codebase for use in both restricted networks and cloud environments."
             ],
-            skills: ["Python", "LangChain", "ChromaDB", "ReportLab", "BeautifulSoup", "Pillow", "Streamlit", "Groq API", "PyMuPDF", "Ollama", "dotenv", "Git", "Github"]
-            // source: ""
+            skills: ["Python", "LangChain", "ChromaDB", "ReportLab", "BeautifulSoup", "Pillow", "Streamlit", "Groq API", "PyMuPDF", "Ollama", "dotenv", "Git", "Github"],
+            certi_link: ""
         }
     ]
 
@@ -58,7 +82,7 @@ const Experience = ({ ExperienceRef_Passed }) => {
         <>
 
             <div
-                className=' container mx-auto min-h-screen w-[1400px] p-10'
+                className='relative container mx-auto min-h-screen w-[1400px] p-10'
                 ref={ExperienceRef_Passed}
             >
 
@@ -128,11 +152,11 @@ const Experience = ({ ExperienceRef_Passed }) => {
                                         <div className="lower flex w-full px-10 items-center">
 
                                             {/* Skills */}
-                                            <div className="skills flex flex-wrap gap-3 w-[90%]">
+                                            <div className="skills flex flex-wrap gap-x-4 gap-y-1 w-[90%]">
                                                 {item.skills.map((item2) =>
                                                     <motion.span
                                                         key={item2}
-                                                        className='bg-[#e5dbff] text-[#9571ff] px-5 py-2 rounded-[20px] font-semibold text-center text-xl'
+                                                        className='font-semibold text-2xl my-1 bg-blue-500 w-fit px-4 py-1.5 rounded-[20px] cursor-pointer text-white'
                                                         whileHover={{
                                                             scale: 1.1,
                                                             transition: { duration: 0.2 }
@@ -144,8 +168,11 @@ const Experience = ({ ExperienceRef_Passed }) => {
                                             </div>
 
                                             {/* Certification Button */}
-                                            <motion.div
+                                            <motion.a
                                                 className="certificate flex justify-center items-center w-[10%] h-[60px] rounded-[26px] bg-black text-white cursor-pointer"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                href={item.certi_link}
                                                 whileHover={{
                                                     scale: 1.15,
                                                     transition: { duration: 0.3 }
@@ -156,11 +183,113 @@ const Experience = ({ ExperienceRef_Passed }) => {
                                                 }}
                                             >
                                                 <PiCertificate fontSize={50} />
-                                            </motion.div>
+                                            </motion.a>
 
                                         </div>
 
                                     </div>
+                                }
+
+                                {/* Cloud 16 */}
+                                {item.key_index === 1 &&
+                                    <>
+                                        <div className="pointer-events-none absolute inset-0 -z-20" style={{ background: "transparent" }}>
+                                            <motion.div
+                                                className="absolute -bottom-[60px] -left-[140px]"
+                                                initial={{ x: 0, y: 0, scale: 1, rotate: 15 }}
+                                                animate={{
+                                                    x: [0, 5, 0, -5, 0],
+                                                    y: [0, -10, 0, 10, 0],
+                                                    scale: [1, 1.15, 1],
+                                                }}
+                                                transition={{
+                                                    x: { duration: 30, repeat: Infinity, ease: "easeInOut" },
+                                                    y: { duration: 15, repeat: Infinity, ease: "easeInOut" },
+                                                    scale: { duration: 30, repeat: Infinity, ease: "easeInOut" },
+                                                }}
+                                            >
+                                                <img src={Cloud16} className="w-[250px]" alt="" />
+                                            </motion.div>
+                                        </div>
+                                    </>
+                                }
+
+                                {/* Cloud 17 */}
+                                {item.key_index === 1 &&
+                                    <>
+                                        <div className="pointer-events-none absolute inset-0 -z-20"
+                                            style={{ background: "transparent" }}
+                                        >
+                                            <motion.div
+                                                className='absolute -top-[70px] -right-[160px]'
+                                                initial={{ x: 0, y: 0, scale: 1, rotate: 10 }}
+                                                animate={{
+                                                    x: [0, 5, 0, -5, 0],
+                                                    y: [0, -10, 0, 10, 0],
+                                                    scale: [1, 1.15, 1]
+                                                }}
+                                                transition={{
+                                                    x: { duration: 30, repeat: Infinity, ease: "easeInOut" },
+                                                    y: { duration: 15, repeat: Infinity, ease: "easeInOut" },
+                                                    scale: { duration: 30, repeat: Infinity, ease: "easeInOut" }
+                                                }}
+                                            >
+                                                <img src={Cloud17} className='w-[270px]' alt="" />
+                                            </motion.div>
+                                        </div>
+                                    </>
+                                }
+
+                                {/* Cloud 11 */}
+                                {item.key_index === 2 &&
+                                    <>
+                                        <div className="pointer-events-none absolute inset-0 -z-20"
+                                            style={{ background: "transparent" }}
+                                        >
+                                            <motion.div
+                                                className='absolute -top-[70px] -right-[170px]'
+                                                initial={{ x: 0, y: 0, scale: 1, rotate: 20 }}
+                                                animate={{
+                                                    x: [0, 5, 0, -5, 0],
+                                                    y: [0, -10, 0, 10, 0],
+                                                    scale: [1, 1.15, 1]
+                                                }}
+                                                transition={{
+                                                    x: { duration: 30, repeat: Infinity, ease: "easeInOut" },
+                                                    y: { duration: 15, repeat: Infinity, ease: "easeInOut" },
+                                                    scale: { duration: 30, repeat: Infinity, ease: "easeInOut" }
+                                                }}
+                                            >
+                                                <img src={Cloud11} className='w-[280px]' alt="" />
+                                            </motion.div>
+                                        </div>
+                                    </>
+                                }
+
+                                {/* Cloud 13 */}
+                                {item.key_index === 2 &&
+                                    <>
+                                        <div className="pointer-events-none absolute inset-0 -z-20"
+                                            style={{ background: "transparent" }}
+                                        >
+                                            <motion.div
+                                                className='absolute -bottom-[100px] -left-[200px]'
+                                                initial={{ x: 0, y: 0, scale: 1, rotate: 20 }}
+                                                animate={{
+                                                    x: [0, 5, 0, -5, 0],
+                                                    y: [0, -10, 0, 10, 0],
+                                                    scale: [1, 1.15, 1]
+                                                }}
+                                                transition={{
+                                                    x: { duration: 30, repeat: Infinity, ease: "easeInOut" },
+                                                    y: { duration: 15, repeat: Infinity, ease: "easeInOut" },
+                                                    scale: { duration: 30, repeat: Infinity, ease: "easeInOut" }
+                                                }}
+                                            >
+                                                <img src={Cloud13} className='w-[300px]' alt="" />
+                                            </motion.div>
+                                        </div>
+                                    </>
                                 }
 
                             </div>
@@ -173,7 +302,11 @@ const Experience = ({ ExperienceRef_Passed }) => {
                                     <IoChevronUp
                                         className="w-full h-[35px] cursor-pointer"
                                         fontSize={40}
-                                        onClick={() => toggleIndex(index)}
+                                        onClick={() => {
+                                            toggleIndex(index);
+                                            onScrollToExperience();
+                                        }}
+                                    // onClick={onScrollToExperience}
                                     />
                                 ) : (
                                     <IoChevronDown
@@ -186,10 +319,10 @@ const Experience = ({ ExperienceRef_Passed }) => {
 
                         </div>
                     })}
-                    
+
                 </div>
 
-            </div>
+            </div >
 
         </>
     )
