@@ -5,32 +5,57 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from "framer-motion"
 import { Download, Contact, Sun, Moon } from 'lucide-react';
 
-const Navbar = () => {
-
+const Navbar = ({ onScrollToAbout, onScrollToSkills, onScrollToExperience, onScrollToProjects, onScrollToContact }) => {
     const [isDark, setIsDark] = useState(false);
 
+    const navItems = [
+        { label: "About", onClick: onScrollToAbout },
+        { label: "Skills", onClick: onScrollToSkills },
+        { label: "Experience", onClick: onScrollToExperience },
+        { label: "Projects", onClick: onScrollToProjects },
+    ];
 
     return (
         <>
-            <div className="flex justify-between w-[100%] px-5 py-4 items-center bg-[#F7F6F6]">
+            <div className="flex justify-between w-[100%] px-5 py-5 items-center ">
 
                 <div className="1-Left flex gap-32 leading-none items-center">
 
                     {/* Logo */}
-                    <div className="logo pl-16 text-2xl font-semibold leading-none">
+                    <div className="logo pl-16 text-3xl font-bold leading-none">
                         <span>Ahzam</span>
                     </div>
 
                     {/* Navbar Main Options */}
-                    <ul className='flex gap-16 text-xl font-semibold leading-none pt-0'>
-                        <li className='cursor-pointer'>About</li>
-                        <li className='cursor-pointer'>Skills</li>
-                        <li className='cursor-pointer'>Experience</li>
-                        <li className='cursor-pointer'>Projects</li>
+                    <ul className="flex gap-4 text-2xl font-bold leading-none">
+                        {navItems.map((item, idx) => (
+                            <motion.li
+                                key={idx}
+                                onClick={item.onClick}
+                                className="relative cursor-pointer px-5 py-1.5 overflow-hidden"
+                                initial="rest"
+                                whileHover="hover"
+                                animate="rest"
+                                variants={{
+                                    rest: { color: "black" },
+                                    hover: { color: "white" }
+                                }}
+                            >
+                                {/* Background animation */}
+                                <motion.span
+                                    className="absolute left-0 bottom-0 w-full bg-black -z-10"
+                                    variants={{
+                                        rest: { height: "0%" },
+                                        hover: { height: "100%" }
+                                    }}
+                                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                                />
+                                {item.label}
+                            </motion.li>
+                        ))}
                     </ul>
 
                 </div>
-
 
                 <div className='2-Right flex gap-10 items-center'>
 
@@ -50,7 +75,7 @@ const Navbar = () => {
                                         opacity: { duration: 0.4, ease: "easeOut" }
                                     }}
                                 >
-                                    <Sun size={28}/>
+                                    <Sun size={30} />
                                 </motion.div>
                             ) : (
                                 <motion.div
@@ -65,39 +90,58 @@ const Navbar = () => {
                                         opacity: { duration: 0.4, ease: "easeOut" }
                                     }}
                                 >
-                                    <Moon size={28}/>
+                                    <Moon size={30} />
                                 </motion.div>
                             )}
                         </AnimatePresence>
                     </div>
 
-                    {/* Change Motions to "quick then slow" */}
                     {/* Buttons */}
                     <div className="Btns flex justify-evenly gap-3 items-center">
 
                         {/* Resume */}
-                        <div className="Resume text-white font-semibold">
+                        <a
+                            className="Resume text-white font-bold text-xl"
+                            href="https://drive.google.com/file/d/1aY2xjhcI6xxNbtIFR6Iu2J-iWL3LBzXV/view?usp=sharing"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             <motion.button
-                                className="bg-black w-[90px] h-10 rounded-full"
+                                className="bg-black w-fit rounded-[18px] px-5 py-1.5"
                                 whileHover={{
                                     scale: 1.15,
                                     transition: {
                                         duration: 0.3
                                     }
                                 }}
+                                whileTap={{
+                                    scale: 0.8,
+                                    transition: {
+                                        duration: 0.1
+                                    }
+                                }}
                             >
                                 <span>Resume</span>
                             </motion.button>
-                        </div>
+                        </a>
 
                         {/* Contact */}
-                        <div className="Resume text-white font-semibold">
+                        <div 
+                            className="Contact text-white font-bold text-xl"
+                            onClick={onScrollToContact}
+                        >
                             <motion.button
-                                className="bg-black w-[90px] h-10 rounded-full"
+                                className="bg-black w-fit rounded-[18px] px-5 py-1.5"
                                 whileHover={{
                                     scale: 1.15,
                                     transition: {
                                         duration: 0.3
+                                    }
+                                }}
+                                whileTap={{
+                                    scale: 0.8,
+                                    transition: {
+                                        duration: 0.1
                                     }
                                 }}
                             >

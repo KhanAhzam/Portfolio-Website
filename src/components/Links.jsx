@@ -18,7 +18,7 @@ const iconData = [
     {
         id: 'resume',
         icon: <FaFile color="white" size={26} />,
-        link: 'https://drive.google.com/file/d/1aY2xjhcI6xxNbtIFR6Iu2J-iWL3LBzXV/view?usp=sharing' // Local or public link
+        link: 'https://drive.google.com/file/d/1aY2xjhcI6xxNbtIFR6Iu2J-iWL3LBzXV/view?usp=sharing'
     },
     {
         id: 'github',
@@ -31,7 +31,7 @@ const iconData = [
 const Links = () => {
     return (
         <>
-            <div className="links fixed bottom-8 left-4">
+            <div className="links fixed bottom-14 left-4">
                 <ul className="flex flex-col items-center gap-1">
                     
                     {iconData.map(({ id, icon, link }) => (

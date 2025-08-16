@@ -18,6 +18,33 @@ const Projects = ({ ProjectsRef_Passed }) => {
             github_link: "https://github.com/KhanAhzam/Listly-todo",
             is_hosted: false,
             hosting_link: null,
+        },
+        {
+            title: "WeatherNow",
+            img: null, // replace with your image import if available
+            desc: "WeatherNow is a live weather dashboard that shows current conditions and forecasts for any location, powered by real-time API data and a responsive design.",
+            stack: ["ReactJS", "TailwindCSS", "OpenWeather API"],
+            github_link: "https://github.com/your-username/weather-now",
+            is_hosted: true,
+            hosting_link: "https://weathernow-demo.vercel.app",
+        },
+        {
+            title: "NoteSpace",
+            img: null, // replace with your image import if available
+            desc: "NoteSpace is a simple note-taking app that allows you to create, edit, and organize notes with markdown support and quick search functionality.",
+            stack: ["Next.js", "TailwindCSS", "LocalStorage"],
+            github_link: "https://github.com/your-username/note-space",
+            is_hosted: true,
+            hosting_link: "https://notespaces-demo.vercel.app",
+        },
+        {
+            title: "BudgetBuddy",
+            img: null, // replace with your image import if available
+            desc: "BudgetBuddy helps you track expenses, categorize spending, and visualize your budget trends with intuitive charts and reports.",
+            stack: ["ReactJS", "Chart.js", "TailwindCSS"],
+            github_link: "https://github.com/your-username/budget-buddy",
+            is_hosted: false,
+            hosting_link: null,
         }
     ]
 
@@ -38,15 +65,15 @@ const Projects = ({ ProjectsRef_Passed }) => {
                 <div className="my-10 px-16">
 
                     {Projects.map((item) =>
-                        <div key={item.title} className='relative overflow-hidden bg-[#f5f5f5] border border-[#f5f5f5] h-[500px] w-full rounded-3xl py-10 pl-10 flex my-10'>
+                        <div key={item.title} className='relative overflow-hidden bg-[#f5f5f5] border border-[#f5f5f5] h-[500px] w-full rounded-3xl py-10 pl-10 flex mt-20'>
 
                             <div className="left w-[35%] flex flex-col justify-between">
 
                                 {/* Upper */}
                                 <div className="upper flex flex-col gap-3">
-                                
+
                                     {/* Title */}
-                                    <div className="title text-5xl font-semibold mb-5">
+                                    <div className="title text-5xl font-bold mb-5">
                                         {item.title}
                                     </div>
 
@@ -93,7 +120,7 @@ const Projects = ({ ProjectsRef_Passed }) => {
                                     </a>
 
                                     {/* Hosted */}
-                                    {item.is_hosted && 
+                                    {item.is_hosted &&
                                         <a
                                             href={item.hosting_link}
                                             target="_blank"

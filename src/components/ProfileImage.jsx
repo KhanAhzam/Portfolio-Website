@@ -10,13 +10,6 @@ function generateRandomNum(min = 50, max = 90) {
     return random
 }
 
-
-
-//Change this to ensure a circular shape is already there like use an array of fixed values
-
-
-
-
 const ProfileImage = () => {
     const [radii, setRadii] = useState({
         TopRightX: generateRandomNum(),
