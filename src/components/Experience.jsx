@@ -37,7 +37,7 @@ const Experience = ({ ExperienceRef_Passed, onScrollToExperience }) => {
             company: "tendr",
             role: "Frontend Developer Intern",
             duration_start: "April 2025",
-            duration_ends: "Present",
+            duration_ends: "August 2025",
             location: "Remote",
             details: [
                 "Developed a full-featured website from scratch using React.js and Tailwind CSS, with a focus on clean, maintainable, and scalable code.",
@@ -99,7 +99,7 @@ const Experience = ({ ExperienceRef_Passed, onScrollToExperience }) => {
 
                             {/* Experience Box */}
                             <div
-                                className={`w-full rounded-[30px] bg-[#f5f5f5] p-10 ${openStates[index] ? "h-fit" : "h-[200px]"}`}
+                                className={`w-full rounded-[30px] shadow-lg bg-[#f5f5f5] p-10 ${openStates[index] ? "h-fit" : "h-[200px]"}`}
                             >
 
                                 {/* Upper-Visible Text */}
@@ -156,7 +156,7 @@ const Experience = ({ ExperienceRef_Passed, onScrollToExperience }) => {
                                                 {item.skills.map((item2) =>
                                                     <motion.span
                                                         key={item2}
-                                                        className='font-semibold text-2xl my-1 bg-blue-500 w-fit px-4 py-1.5 rounded-[20px] cursor-pointer text-white'
+                                                        className='font-semibold text-xl mt-1 bg-blue-500 w-fit px-5 py-1.5 rounded-[20px] cursor-pointer text-white'
                                                         whileHover={{
                                                             scale: 1.1,
                                                             transition: { duration: 0.2 }
@@ -190,30 +190,6 @@ const Experience = ({ ExperienceRef_Passed, onScrollToExperience }) => {
                                     </div>
                                 }
 
-                                {/* Cloud 16 */}
-                                {item.key_index === 1 &&
-                                    <>
-                                        <div className="pointer-events-none absolute inset-0 -z-20" style={{ background: "transparent" }}>
-                                            <motion.div
-                                                className="absolute -bottom-[60px] -left-[140px]"
-                                                initial={{ x: 0, y: 0, scale: 1, rotate: 15 }}
-                                                animate={{
-                                                    x: [0, 5, 0, -5, 0],
-                                                    y: [0, -10, 0, 10, 0],
-                                                    scale: [1, 1.15, 1],
-                                                }}
-                                                transition={{
-                                                    x: { duration: 30, repeat: Infinity, ease: "easeInOut" },
-                                                    y: { duration: 15, repeat: Infinity, ease: "easeInOut" },
-                                                    scale: { duration: 30, repeat: Infinity, ease: "easeInOut" },
-                                                }}
-                                            >
-                                                <img src={Cloud16} className="w-[250px]" alt="" />
-                                            </motion.div>
-                                        </div>
-                                    </>
-                                }
-
                                 {/* Cloud 17 */}
                                 {item.key_index === 1 &&
                                     <>
@@ -221,10 +197,10 @@ const Experience = ({ ExperienceRef_Passed, onScrollToExperience }) => {
                                             style={{ background: "transparent" }}
                                         >
                                             <motion.div
-                                                className='absolute -top-[70px] -right-[160px]'
-                                                initial={{ x: 0, y: 0, scale: 1, rotate: 10 }}
+                                                className='absolute -top-[90px] -right-[160px]'
+                                                initial={{ x: 0, y: 0, scale: 1, rotate: 5, opacity: "90%" }}
                                                 animate={{
-                                                    x: [0, 5, 0, -5, 0],
+                                                    x: [0, 15, 0, -15, 0],
                                                     y: [0, -10, 0, 10, 0],
                                                     scale: [1, 1.15, 1]
                                                 }}
@@ -234,23 +210,23 @@ const Experience = ({ ExperienceRef_Passed, onScrollToExperience }) => {
                                                     scale: { duration: 30, repeat: Infinity, ease: "easeInOut" }
                                                 }}
                                             >
-                                                <img src={Cloud17} className='w-[270px]' alt="" />
+                                                <img src={Cloud17} className='w-[330px]' alt="" />
                                             </motion.div>
                                         </div>
                                     </>
                                 }
 
-                                {/* Cloud 11 */}
+                                {/* Cloud 16 */}
                                 {item.key_index === 2 &&
                                     <>
                                         <div className="pointer-events-none absolute inset-0 -z-20"
                                             style={{ background: "transparent" }}
                                         >
                                             <motion.div
-                                                className='absolute -top-[70px] -right-[170px]'
-                                                initial={{ x: 0, y: 0, scale: 1, rotate: 20 }}
+                                                className='absolute -bottom-[80px] -left-[140px]'
+                                                initial={{ x: 0, y: 0, scale: 1, rotate: 15, opacity: "90%" }}
                                                 animate={{
-                                                    x: [0, 5, 0, -5, 0],
+                                                    x: [0, 15, 0, -15, 0],
                                                     y: [0, -10, 0, 10, 0],
                                                     scale: [1, 1.15, 1]
                                                 }}
@@ -260,33 +236,7 @@ const Experience = ({ ExperienceRef_Passed, onScrollToExperience }) => {
                                                     scale: { duration: 30, repeat: Infinity, ease: "easeInOut" }
                                                 }}
                                             >
-                                                <img src={Cloud11} className='w-[280px]' alt="" />
-                                            </motion.div>
-                                        </div>
-                                    </>
-                                }
-
-                                {/* Cloud 13 */}
-                                {item.key_index === 2 &&
-                                    <>
-                                        <div className="pointer-events-none absolute inset-0 -z-20"
-                                            style={{ background: "transparent" }}
-                                        >
-                                            <motion.div
-                                                className='absolute -bottom-[100px] -left-[200px]'
-                                                initial={{ x: 0, y: 0, scale: 1, rotate: 20 }}
-                                                animate={{
-                                                    x: [0, 5, 0, -5, 0],
-                                                    y: [0, -10, 0, 10, 0],
-                                                    scale: [1, 1.15, 1]
-                                                }}
-                                                transition={{
-                                                    x: { duration: 30, repeat: Infinity, ease: "easeInOut" },
-                                                    y: { duration: 15, repeat: Infinity, ease: "easeInOut" },
-                                                    scale: { duration: 30, repeat: Infinity, ease: "easeInOut" }
-                                                }}
-                                            >
-                                                <img src={Cloud13} className='w-[300px]' alt="" />
+                                                <img src={Cloud16} className='w-[300px]' alt="" />
                                             </motion.div>
                                         </div>
                                     </>
@@ -296,7 +246,7 @@ const Experience = ({ ExperienceRef_Passed, onScrollToExperience }) => {
 
                             {/* Arrow */}
                             <div
-                                className="absolute arrow -bottom-8 left-1/2 -translate-x-1/2 bg-[#f5f5f5] rounded-3xl flex items-end justify-center h-[60px] w-[100px]"
+                                className="absolute arrow -bottom-8 left-1/2 -translate-x-1/2 bg-[#f5f5f5] rounded-3xl flex items-end justify-center h-[60px] w-[100px] shadow-[0_6px_6px_-4px_rgba(0,0,0,0.25)]"
                             >
                                 {openStates[index] ? (
                                     <IoChevronUp

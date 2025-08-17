@@ -231,14 +231,13 @@ const Skills = ({ SkillsRef_Passed }) => {
                         )
                     )}
 
-
                     {/* Cloud 15 */}
                     <div className="pointer-events-none absolute inset-0 -z-20"
                         style={{ background: "transparent" }}
                     >
                         <motion.div
                             className='absolute -top-[15%] -right-[10%]'
-                            initial={{ x: 0, y: 0, scale: 1, rotate: 10 }}
+                            initial={{ x: 0, y: 0, scale: 1, rotate: 13 }}
                             animate={{
                                 x: [0, 5, 0, -5, 0],
                                 y: [0, -10, 0, 10, 0],
@@ -271,8 +270,8 @@ const Skills = ({ SkillsRef_Passed }) => {
                         style={{ background: "transparent" }}
                     >
                         <motion.div
-                            className='absolute -bottom-[8%] -left-[8%]'
-                            initial={{ x: 0, y: 0, scale: 1, rotate: -10, scaleX: -1 }}
+                            className='absolute -bottom-[8%] -left-[10%]'
+                            initial={{ x: 0, y: 0, scale: 1, rotate: -15, scaleX: -1 }}
                             animate={{
                                 x: [0, 5, 0, -5, 0],
                                 y: [0, -10, 0, 10, 0],
@@ -296,7 +295,7 @@ const Skills = ({ SkillsRef_Passed }) => {
                                 }
                             }}
                         >
-                            <img src={Cloud14} className='w-[300px]' alt="" />
+                            <img src={Cloud14} className='w-[350px]' alt="" />
                         </motion.div>
                     </div>
 

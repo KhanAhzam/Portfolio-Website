@@ -48,7 +48,7 @@ const Links = () => {
 
                             <motion.a
                                 href={item.link}
-                                className="bg-black rounded-full py-3 px-4 cursor-pointer h-[60px] w-[60px] flex items-center justify-start gap-6"
+                                className="bg-black rounded-full py-3 px-4 cursor-pointer h-[60px] w-[60px] flex items-center justify-start gap-5"
                                 whileHover={{
                                     width: item.width,
                                     transition: {
@@ -65,7 +65,7 @@ const Links = () => {
                                     : {})}
 
                             >
-                                <span className=''>
+                                <span className={`${ index===2 ? "pl-[2px]" : "" } ${ index===1 ? "pl-[1px]" : "" }`}>
                                     {item.icon}
                                 </span>
 
@@ -83,6 +83,7 @@ const Links = () => {
 
 
                             </motion.a>
+
                         </li>
                     ))}
 
