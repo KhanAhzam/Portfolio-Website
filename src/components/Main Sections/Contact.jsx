@@ -2,24 +2,6 @@ import React from 'react'
 
 import { motion } from "framer-motion"
 
-import Cloud1 from "../assets/Clouds/1.jpg";
-import Cloud2 from "../assets/Clouds/2.jpg";
-import Cloud3 from "../assets/Clouds/3.jpg";
-import Cloud4 from "../assets/Clouds/4.jpg";
-import Cloud5 from "../assets/Clouds/5.jpg";
-import Cloud6 from "../assets/Clouds/6.jpg";
-import Cloud7 from "../assets/Clouds/7.jpg";
-import Cloud8 from "../assets/Clouds/Potential1.png";
-import Cloud9 from "../assets/Clouds/Potential2.png";
-import Cloud10 from "../assets/Clouds/Potential3.png";
-import Cloud11 from "../assets/Clouds/Potential4.png";
-import Cloud12 from "../assets/Clouds/Potential5.png";
-import Cloud13 from "../assets/Clouds/Potential6.png";
-import Cloud14 from "../assets/Clouds/dark1.png";
-import Cloud15 from "../assets/Clouds/dark2.png";
-import Cloud16 from "../assets/Clouds/dark3.png";
-import Cloud17 from "../assets/Clouds/dark4.png";
-
 const Contact = ({ ContactRef_Passed }) => {
     return (
         <>

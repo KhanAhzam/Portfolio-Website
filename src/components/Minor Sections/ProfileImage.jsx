@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react'
 
 import { motion } from 'framer-motion'
 
-import Neymar from '../assets/Neymar.jpg'
-import Profile from '../assets/ProfilePhoto.JPG'
+import NeymarPhoto from '../../assets/Profile/Neymar.jpg'
+import ProfilePhoto from '../../assets/Profile/ProfilePhoto.JPG'
 
 function generateRandomNum(min = 50, max = 90) {
     const random = (Math.random() * (max - min) + min).toFixed(3);
@@ -44,7 +44,7 @@ const ProfileImage = () => {
 
     return (
         <>
-            <motion.img src={Profile}
+            <motion.img src={ProfilePhoto}
                 className='w-[450px] h-[450px] object-cover border-[3px] border-black'
                 alt="Profile Photo"
                 animate={{

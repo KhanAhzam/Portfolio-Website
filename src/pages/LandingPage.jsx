@@ -4,25 +4,19 @@ import { motion } from "framer-motion"
 
 import { MapPin, MoveDown, Download, Bold } from 'lucide-react';
 
-
 import Cloud1 from "../assets/Clouds/1.jpg";
 import Cloud2 from "../assets/Clouds/2.jpg";
 import Cloud3 from "../assets/Clouds/3.jpg";
-import Cloud4 from "../assets/Clouds/4.jpg";
-import Cloud5 from "../assets/Clouds/5.jpg";
-import Cloud6 from "../assets/Clouds/6.jpg";
-import Cloud7 from "../assets/Clouds/7.jpg";
 
-import ProfileImage from '../components/ProfileImage'
-import Navbar from '../components/Navbar'
-import Links from '../components/Links'
-import About from '../components/About'
-import Skills from '../components/Skills'
-import Experience from '../components/Experience'
-import Projects from '../components/Projects'
-import Contact from '../components/Contact'
-import Footer from '../components/Footer';
-import Clouds from '../components/Clouds';
+import ProfileImage from '../components/Minor Sections/ProfileImage'
+import Navbar from '../components/Minor Sections/Navbar'
+import Links from '../components/Minor Sections/Links'
+import About from '../components/Main Sections/About'
+import Skills from '../components/Main Sections/Skills'
+import Experience from '../components/Main Sections/Experience'
+import Projects from '../components/Main Sections/Projects'
+import Contact from '../components/Main Sections/Contact'
+import Footer from '../components/Minor Sections/Footer';
 
 const LandingPage = () => {
 
@@ -53,9 +47,6 @@ const LandingPage = () => {
   return (
     <>
       <div className='overflow-x-hidden'>
-
-        {/* Background-Clouds */}
-        {/* <Clouds /> */}
 
         {/* Hero */}
         <div className='min-h-screen flex flex-col justify-between mb-5'>
@@ -158,7 +149,7 @@ const LandingPage = () => {
                     }
                   }}
                 >
-                  <img src={Cloud6} className='w-[550px]' alt="" />
+                  <img src={Cloud3} className='w-[550px]' alt="" />
                 </motion.div>
               </div>
 
@@ -192,7 +183,7 @@ const LandingPage = () => {
                     }
                   }}
                 >
-                  <img src={Cloud4} className='w-[500px]' alt="" />
+                  <img src={Cloud2} className='w-[500px]' alt="" />
                 </motion.div>
               </div>
 
@@ -249,7 +240,6 @@ const LandingPage = () => {
 
         {/* Footer */}
         <Footer />
-
 
       </div>
     </>
