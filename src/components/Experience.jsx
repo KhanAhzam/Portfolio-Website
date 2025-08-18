@@ -256,7 +256,6 @@ const Experience = ({ ExperienceRef_Passed, onScrollToExperience }) => {
                                             toggleIndex(index);
                                             onScrollToExperience();
                                         }}
-                                    // onClick={onScrollToExperience}
                                     />
                                 ) : (
                                     <IoChevronDown

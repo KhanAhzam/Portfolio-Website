@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg role="img" aria-labelledby="title desc" viewBox="0 0 220 120" xmlns="http://www.w3.org/2000/svg">
+  <title id="title">Cloud Logo (Filled)</title>
+  <desc id="desc">A rounded cloud logo with a soft gradient fill and subtle highlight.</desc>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a5b4fc"/>
+      <stop offset="100%" stop-color="#60a5fa"/>
+    </linearGradient>
+    <clipPath id="clip">
+      <path id="shape"
+        d="M58 94
+           H162
+           c14 0 26-12 26-26
+           c0-14-11-25-25-25
+           c-3.8 0-7.5 0.8-10.8 2.3
+           C150 29 137 18 121 18
+           c-17 0-31 12.4-33.4 28.5
+           C84.3 45.5 80.9 45 77.4 45
+           C63.0 45 51.5 56.5 51.5 71
+           c0 10.5 3.8 18.9 6.5 23
+           Z" />
+    </clipPath>
+    <style>
+      .stroke { stroke: #1f2937; stroke-width: 4; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+  </defs>
+
+  <use href="#shape" fill="url(#g)"/>
+  <!-- subtle top highlight -->
+  <g clip-path="url(#clip)" opacity="0.35">
+    <ellipse cx="110" cy="50" rx="70" ry="22" fill="white"/>
+  </g>
+  <use href="#shape" class="stroke"/>
+</svg>

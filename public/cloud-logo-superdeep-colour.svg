@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg role="img" aria-labelledby="colCloudTitle colCloudDesc" 
+     viewBox="0 0 380 220" xmlns="http://www.w3.org/2000/svg">
+  <title id="colCloudTitle">Cloud Logo (Super Deep Grooves, Colour)</title>
+  <desc id="colCloudDesc">A fluffy colourful cloud with exaggerated lobes and deep grooves.</desc>
+
+  <defs>
+    <linearGradient id="superCloudGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+
+  <path d="M140 190
+           C65 200, 20 150, 50 95
+           C5 75, 25 30, 85 45
+           C90 15, 125 5, 155 25
+           C165 0, 210 0, 230 30
+           C250 5, 300 20, 310 65
+           C355 75, 360 110, 330 145
+           C360 165, 325 200, 270 185
+           C240 210, 185 215, 155 190
+           C150 200, 145 200, 140 190 Z"
+        fill="url(#superCloudGradient)"
+        stroke="#1f2937" stroke-width="7"
+        stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

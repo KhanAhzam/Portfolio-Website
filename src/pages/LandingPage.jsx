@@ -49,7 +49,7 @@ const LandingPage = () => {
   };
 
 
-
+  
   return (
     <>
       <div className='overflow-x-hidden'>
@@ -203,20 +203,6 @@ const LandingPage = () => {
 
           </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
           {/* Home-Arrow */}
           <div className="arrow my-5 flex items-center justify-center">
             <motion.span
@@ -242,30 +228,6 @@ const LandingPage = () => {
           <Links />
 
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         {/* About */}
         <About AboutRef_Passed={AboutRef} />
