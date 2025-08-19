@@ -56,9 +56,15 @@ const Projects = ({ ProjectsRef_Passed }) => {
             >
 
                 {/* Heading */}
-                <div className="heading font-bold text-6xl">
+                <motion.div
+                    className="heading font-bold text-6xl"
+                    initial={{ x: -200, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 1, ease: "easeOut" }}
+                    viewport={{ once: true, amount: 0.3 }}
+                >
                     Projects.
-                </div>
+                </motion.div>
 
                 {/* Content */}
                 <div className="my-10 px-16">
@@ -67,8 +73,13 @@ const Projects = ({ ProjectsRef_Passed }) => {
                         <div key={item.title} className='relative'>
 
                             {/* Card Content */}
-                            <motion.div className='relative overflow-hidden bg-[#f5f5f5] h-[500px] w-full rounded-3xl pt-10 pb-5 pl-10 flex mt-20 shadow-lg'
+                            <motion.div
+                                className='relative overflow-hidden bg-[#f5f5f5] h-[500px] w-full rounded-3xl pt-10 pb-5 pl-10 flex mt-20 shadow-lg'
                                 whileHover="hover"
+                                initial={{ x: 300, opacity: 0 }}
+                                whileInView={{ x: 0, opacity: 1 }}
+                                transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+                                viewport={{ once: true, amount: 0.2 }}
                             >
 
                                 <div className="left w-[35%] flex flex-col justify-between">
@@ -174,8 +185,13 @@ const Projects = ({ ProjectsRef_Passed }) => {
 
                             {/* Cloud 11 */}
                             {Proj_index === 0 &&
-                                <div className="pointer-events-none absolute inset-0 -z-20"
+                                <motion.div
+                                    className="pointer-events-none absolute inset-0 -z-20"
                                     style={{ background: "transparent" }}
+                                    initial={{ x: 300, opacity: 0 }}
+                                    whileInView={{ x: 0, opacity: 1 }}
+                                    transition={{ duration: 1.5, ease: "easeOut", delay: 0.8 }}
+                                    viewport={{ once: true, amount: 0.1 }}
                                 >
                                     <motion.div
                                         className='absolute -top-[20%] -right-[16%]'
@@ -193,13 +209,18 @@ const Projects = ({ ProjectsRef_Passed }) => {
                                     >
                                         <img src={Cloud10} className='w-[350px]' alt="" />
                                     </motion.div>
-                                </div>
+                                </motion.div>
                             }
 
                             {/* Cloud 6 */}
                             {Proj_index === 2 &&
-                                <div className="pointer-events-none absolute inset-0 -z-20"
+                                <motion.div
+                                    className="pointer-events-none absolute inset-0 -z-20"
                                     style={{ background: "transparent" }}
+                                    initial={{ x: 200, opacity: 0 }}
+                                    whileInView={{ x: 0, opacity: 1 }}
+                                    transition={{ duration: 1.5, ease: "easeOut", delay: 0.8 }}
+                                    viewport={{ once: true, amount: 0.1 }}
                                 >
                                     <motion.div
                                         className='absolute -top-[20%] -right-[25%]'
@@ -217,13 +238,18 @@ const Projects = ({ ProjectsRef_Passed }) => {
                                     >
                                         <img src={Cloud3} className='w-[450px]' alt="" />
                                     </motion.div>
-                                </div>
+                                </motion.div>
                             }
 
                             {/* Cloud 8 */}
                             {Proj_index === 1 &&
-                                <div className="pointer-events-none absolute inset-0 -z-20"
+                                <motion.div
+                                    className="pointer-events-none absolute inset-0 -z-20"
                                     style={{ background: "transparent" }}
+                                    initial={{ x: -200, opacity: 0 }}
+                                    whileInView={{ x: 0, opacity: 1 }}
+                                    transition={{ duration: 1.5, ease: "easeOut", delay: 0.8 }}
+                                    viewport={{ once: true, amount: 0.1 }}
                                 >
                                     <motion.div
                                         className='absolute -top-[20%] -left-[24%]'
@@ -241,13 +267,18 @@ const Projects = ({ ProjectsRef_Passed }) => {
                                     >
                                         <img src={Cloud8} className='w-[400px]' alt="" />
                                     </motion.div>
-                                </div>
+                                </motion.div>
                             }
 
                             {/* Cloud 14 */}
                             {Proj_index === 2 &&
-                                <div className="pointer-events-none absolute inset-0 -z-20"
+                                <motion.div
+                                    className="pointer-events-none absolute inset-0 -z-20"
                                     style={{ background: "transparent" }}
+                                    initial={{ x: -200, opacity: 0 }}
+                                    whileInView={{ x: 0, opacity: 1 }}
+                                    transition={{ duration: 1.5, ease: "easeOut", delay: 0.8 }}
+                                    viewport={{ once: true, amount: 0.1 }}
                                 >
                                     <motion.div
                                         className='absolute -bottom-[15%] -left-[15%]'
@@ -265,7 +296,7 @@ const Projects = ({ ProjectsRef_Passed }) => {
                                     >
                                         <img src={Cloud4} className='w-[350px]' alt="" />
                                     </motion.div>
-                                </div>
+                                </motion.div>
                             }
 
                         </div>

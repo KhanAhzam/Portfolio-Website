@@ -5,14 +5,15 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from "framer-motion"
 import { Download, Contact, Sun, Moon } from 'lucide-react';
 
-const Navbar = ({ onScrollToAbout, onScrollToSkills, onScrollToExperience, onScrollToProjects, onScrollToContact }) => {
+const Navbar = ({ onScrollToAbout_Passed, onScrollToSkills_Passed, onScrollToExperience_Passed, onScrollToProjects_Passed, onScrollToContact_Passed }) => {
+    
     const [isDark, setIsDark] = useState(false);
 
     const navItems = [
-        { label: "About", onClick: onScrollToAbout },
-        { label: "Skills", onClick: onScrollToSkills },
-        { label: "Experience", onClick: onScrollToExperience },
-        { label: "Projects", onClick: onScrollToProjects },
+        { label: "About", onClick: onScrollToAbout_Passed },
+        { label: "Skills", onClick: onScrollToSkills_Passed },
+        { label: "Experience", onClick: onScrollToExperience_Passed },
+        { label: "Projects", onClick: onScrollToProjects_Passed },
     ];
 
     return (
@@ -128,7 +129,7 @@ const Navbar = ({ onScrollToAbout, onScrollToSkills, onScrollToExperience, onScr
                         {/* Contact */}
                         <div 
                             className="Contact text-white font-bold text-xl"
-                            onClick={onScrollToContact}
+                            onClick={onScrollToContact_Passed}
                         >
                             <motion.button
                                 className="bg-black w-fit rounded-[18px] px-5 py-1.5"

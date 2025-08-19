@@ -72,12 +72,24 @@ const Experience = ({ ExperienceRef_Passed, onScrollToExperience }) => {
             >
 
                 {/* Heading */}
-                <div className="heading font-bold text-6xl">
+                <motion.div
+                    className="heading font-bold text-6xl"
+                    initial={{ x: -200, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 1, ease: "easeOut" }}
+                    viewport={{ once: true, amount: 0.3 }}
+                >
                     Experience.
-                </div>
+                </motion.div>
 
                 {/* Content */}
-                <div className="my-10 px-16">
+                <motion.div
+                    className="my-10 px-16"
+                    initial={{ x: 300, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                >
 
                     {Exp_list.map((item, index) => {
                         return <div key={item.key_index} className="relative main_box my-24">
@@ -178,8 +190,13 @@ const Experience = ({ ExperienceRef_Passed, onScrollToExperience }) => {
                                 {/* Cloud 17 */}
                                 {item.key_index === 1 &&
                                     <>
-                                        <div className="pointer-events-none absolute inset-0 -z-20"
+                                        <motion.div
+                                            className="pointer-events-none absolute inset-0 -z-20"
                                             style={{ background: "transparent" }}
+                                            initial={{ x: 200, opacity: 0 }}
+                                            whileInView={{ x: 0, opacity: 1 }}
+                                            transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
+                                            viewport={{ once: true, amount: 0.4 }}
                                         >
                                             <motion.div
                                                 className='absolute -top-[90px] -right-[160px]'
@@ -197,15 +214,20 @@ const Experience = ({ ExperienceRef_Passed, onScrollToExperience }) => {
                                             >
                                                 <img src={Cloud7} className='w-[330px]' alt="" />
                                             </motion.div>
-                                        </div>
+                                        </motion.div>
                                     </>
                                 }
 
                                 {/* Cloud 16 */}
                                 {item.key_index === 2 &&
                                     <>
-                                        <div className="pointer-events-none absolute inset-0 -z-20"
+                                        <motion.div
+                                            className="pointer-events-none absolute inset-0 -z-20"
                                             style={{ background: "transparent" }}
+                                            initial={{ x: -400, opacity: 0 }}
+                                            whileInView={{ x: 0, opacity: 1 }}
+                                            transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
+                                            viewport={{ once: true, amount: 0.4 }}
                                         >
                                             <motion.div
                                                 className='absolute -bottom-[80px] -left-[140px]'
@@ -223,7 +245,7 @@ const Experience = ({ ExperienceRef_Passed, onScrollToExperience }) => {
                                             >
                                                 <img src={Cloud6} className='w-[300px]' alt="" />
                                             </motion.div>
-                                        </div>
+                                        </motion.div>
                                     </>
                                 }
 
@@ -254,7 +276,7 @@ const Experience = ({ ExperienceRef_Passed, onScrollToExperience }) => {
                         </div>
                     })}
 
-                </div>
+                </motion.div>
 
             </div >
 

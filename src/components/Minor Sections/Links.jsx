@@ -35,13 +35,11 @@ const iconData = [
     }
 ];
 
-
 const Links = () => {
     const [isHoverIndex, setisHoverIndex] = useState(null)
 
     return (
         <>
-            <div className="links fixed bottom-14 left-4">
                 <ul className="flex flex-col items-start gap-2">
                     {iconData.map((item, index) => (
                         <li key={index} className=''>
@@ -88,7 +86,6 @@ const Links = () => {
                     ))}
 
                 </ul>
-            </div>
         </>
     )
 }

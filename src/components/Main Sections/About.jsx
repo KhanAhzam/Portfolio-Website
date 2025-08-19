@@ -15,12 +15,24 @@ const About = ({ AboutRef_Passed }) => {
             >
 
                 {/* Heading */}
-                <div className="heading font-bold text-6xl">
+                <motion.div
+                    className="heading font-bold text-6xl"
+                    initial={{ x: -200, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 1, ease: "easeOut" }}
+                    viewport={{ once: true, amount: 0.3 }}                                  // triggers once, when 30% visible
+
+                >
                     About.
-                </div>
+                </motion.div>
 
                 {/* Content */}
-                <ul>
+                <motion.ul
+                    initial={{ x: 200, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                >
                     <li className="para1 font-medium text-gray-800 text-[26px] my-10 px-16">
                         As a passionate Full Stack Developer, I have expertise in writing clean, efficient, and neat code to create stunning web applications that stand out through thoughtful design and polished execution. I'm skilled at turning needs into great results that far exceed expectations.
                     </li>
@@ -33,10 +45,16 @@ const About = ({ AboutRef_Passed }) => {
                     <li className="para4 font-medium text-gray-800 text-[26px] my-10 px-16">
                         Additionally, I have a strong interest in Data Structures and Algorithms, which I regularly practice using Java to sharpen my logic and problem-solving abilities.
                     </li>
-                </ul>
+                </motion.ul>
 
                 {/* Grab My Resume Btn */}
-                <div className="resume_btn flex items-center justify-center">
+                <motion.div
+                    className="resume_btn flex items-center justify-center"
+                    initial={{ y: 100, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.7, ease: "easeOut" }}
+                    viewport={{ once: true, amount: 0 }}                                // trigger as soon as it appears
+                >
                     <motion.a
                         href="https://drive.google.com/file/d/1aY2xjhcI6xxNbtIFR6Iu2J-iWL3LBzXV/view?usp=sharing"
                         target="_blank"
@@ -59,11 +77,16 @@ const About = ({ AboutRef_Passed }) => {
                     >
                         <span>Grab My Resume!</span>
                     </motion.a>
-                </div>
+                </motion.div>
 
                 {/* Cloud 11 */}
-                <div className="pointer-events-none absolute inset-0 -z-20"
+                <motion.div
+                    className="pointer-events-none absolute inset-0 -z-20"
                     style={{ background: "transparent" }}
+                    initial={{ x: 300, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 1, ease: "easeOut" }}
+                    viewport={{ once: true, amount: 0.4 }}
                 >
                     <motion.div
                         className='absolute top-[3%] -right-[3%]'
@@ -93,11 +116,16 @@ const About = ({ AboutRef_Passed }) => {
                     >
                         <img src={Cloud10} className='w-[350px]' alt="" />
                     </motion.div>
-                </div>
+                </motion.div>
 
                 {/* Cloud 10 */}
-                <div className="pointer-events-none absolute inset-0 -z-20"
+                <motion.div
+                    className="pointer-events-none absolute inset-0 -z-20"
                     style={{ background: "transparent" }}
+                    initial={{ x: -300, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 1, ease: "easeOut" }}
+                    viewport={{ once: true, amount: 0.4 }}
                 >
                     <motion.div
                         className='absolute bottom-[5%] -left-[10%]'
@@ -127,8 +155,7 @@ const About = ({ AboutRef_Passed }) => {
                     >
                         <img src={Cloud9} className='w-[450px]' alt="" />
                     </motion.div>
-                </div>
-
+                </motion.div>
 
             </div>
         </>

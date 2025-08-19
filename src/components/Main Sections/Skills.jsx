@@ -94,12 +94,24 @@ const Skills = ({ SkillsRef_Passed }) => {
             >
 
                 {/* Heading */}
-                <div className="heading font-bold text-6xl">
+                <motion.div
+                    className="heading font-bold text-6xl"
+                    initial={{ x: -200, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 1, ease: "easeOut" }}
+                    viewport={{ once: true, amount: 0.3 }}
+                >
                     Skills.
-                </div>
+                </motion.div>
 
                 {/* Content */}
-                <div className="relative my-10 px-16 grid grid-cols-4 text-center gap-y-[52px]">
+                <motion.div
+                    className="relative my-10 px-16 grid grid-cols-4 text-center gap-y-[52px]"
+                    initial={{ x: 300, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                >
 
                     {/* Mapping Array */}
                     {skills_Arr.map((item, index) =>
@@ -217,8 +229,13 @@ const Skills = ({ SkillsRef_Passed }) => {
                     )}
 
                     {/* Cloud 15 */}
-                    <div className="pointer-events-none absolute inset-0 -z-20"
+                    <motion.div
+                        className="pointer-events-none absolute inset-0 -z-20"
                         style={{ background: "transparent" }}
+                        initial={{ x: 200, opacity: 0 }}
+                        whileInView={{ x: 0, opacity: 1 }}
+                        transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
+                        viewport={{ once: true, amount: 0.4 }}
                     >
                         <motion.div
                             className='absolute -top-[15%] -right-[10%]'
@@ -248,11 +265,16 @@ const Skills = ({ SkillsRef_Passed }) => {
                         >
                             <img src={Cloud5} className='w-[350px]' alt="" />
                         </motion.div>
-                    </div>
+                    </motion.div>
 
                     {/* Cloud 14 */}
-                    <div className="pointer-events-none absolute inset-0 -z-20"
+                    <motion.div
+                        className="pointer-events-none absolute inset-0 -z-20"
                         style={{ background: "transparent" }}
+                        initial={{ x: -400, opacity: 0 }}
+                        whileInView={{ x: 0, opacity: 1 }}
+                        transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
+                        viewport={{ once: true, amount: 0.4 }}
                     >
                         <motion.div
                             className='absolute -bottom-[8%] -left-[10%]'
@@ -282,10 +304,10 @@ const Skills = ({ SkillsRef_Passed }) => {
                         >
                             <img src={Cloud4} className='w-[350px]' alt="" />
                         </motion.div>
-                    </div>
+                    </motion.div>
 
 
-                </div>
+                </motion.div>
 
                 {/* More Sills Box */}
                 {MoreSkills &&

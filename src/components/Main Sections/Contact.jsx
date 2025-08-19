@@ -12,12 +12,24 @@ const Contact = ({ ContactRef_Passed }) => {
             >
 
                 {/* Heading */}
-                <div className="heading font-bold text-6xl">
+                <motion.div
+                    className="heading font-bold text-6xl"
+                    initial={{ x: -200, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 1, ease: "easeOut" }}
+                    viewport={{ once: true, amount: 0.3 }}
+                >
                     Contact Me.
-                </div>
+                </motion.div>
 
                 {/* Content */}
-                <div className="my-10 px-16 text-center flex flex-col gap-10 items-center justify-center">
+                <motion.div
+                    className="my-10 px-16 text-center flex flex-col gap-10 items-center justify-center"
+                    initial={{ x: 300, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 1, ease: "easeOut" }}
+                    viewport={{ once: true, amount: 0.3 }}
+                >
 
                     {/* Title */}
                     <div className="font-bold text-5xl">
@@ -33,6 +45,10 @@ const Contact = ({ ContactRef_Passed }) => {
                     {/* Connect */}
                     <motion.a
                         className='font-bold text-3xl px-6 py-3 w-fit bg-blue-500 rounded-3xl text-white'
+                        initial={{ x: 200, opacity: 0 }}
+                        whileInView={{ x: 0, opacity: 1 }}
+                        transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+                        viewport={{ once: true, amount: 0.3 }}
                         whileHover={{
                             scale: 1.15,
                             transition: {
@@ -52,7 +68,7 @@ const Contact = ({ ContactRef_Passed }) => {
                         <span>Get in Touch</span>
                     </motion.a>
 
-                </div>
+                </motion.div>
 
             </div>
 
