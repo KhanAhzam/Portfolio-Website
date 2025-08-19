@@ -79,13 +79,13 @@ const About = ({ AboutRef_Passed }) => {
                     </motion.a>
                 </motion.div>
 
-                {/* Cloud 11 */}
+                {/* Cloud 10 */}
                 <motion.div
                     className="pointer-events-none absolute inset-0 -z-20"
                     style={{ background: "transparent" }}
                     initial={{ x: 300, opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }}
-                    transition={{ duration: 1, ease: "easeOut" }}
+                    transition={{ duration: 1.5, ease: "easeOut", delay: 0.5 }}
                     viewport={{ once: true, amount: 0.4 }}
                 >
                     <motion.div
@@ -97,34 +97,22 @@ const About = ({ AboutRef_Passed }) => {
                             scale: [1, 1.15, 1]
                         }}
                         transition={{
-                            x: {
-                                duration: 30,
-                                repeat: Infinity,
-                                ease: "easeInOut"
-                            },
-                            y: {
-                                duration: 15,
-                                repeat: Infinity,
-                                ease: "easeInOut"
-                            },
-                            scale: {
-                                duration: 30,
-                                repeat: Infinity,
-                                ease: "easeInOut"
-                            }
+                            x: { duration: 30, repeat: Infinity, ease: "easeInOut" },
+                            y: { duration: 15, repeat: Infinity, ease: "easeInOut" },
+                            scale: { duration: 30, repeat: Infinity, ease: "easeInOut" }
                         }}
                     >
-                        <img src={Cloud10} className='w-[350px]' alt="" />
+                        <img src={Cloud10} className='w-[350px]' alt="Cloud 10" />
                     </motion.div>
                 </motion.div>
 
-                {/* Cloud 10 */}
+                {/* Cloud 9 */}
                 <motion.div
                     className="pointer-events-none absolute inset-0 -z-20"
                     style={{ background: "transparent" }}
                     initial={{ x: -300, opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }}
-                    transition={{ duration: 1, ease: "easeOut" }}
+                    transition={{ duration: 1.5, ease: "easeOut", delay: 0.5 }}
                     viewport={{ once: true, amount: 0.4 }}
                 >
                     <motion.div
@@ -136,24 +124,12 @@ const About = ({ AboutRef_Passed }) => {
                             scale: [1, 1.15, 1]
                         }}
                         transition={{
-                            x: {
-                                duration: 30,
-                                repeat: Infinity,
-                                ease: "easeInOut"
-                            },
-                            y: {
-                                duration: 20,
-                                repeat: Infinity,
-                                ease: "easeInOut"
-                            },
-                            scale: {
-                                duration: 30,
-                                repeat: Infinity,
-                                ease: "easeInOut"
-                            }
+                            x: { duration: 30, repeat: Infinity, ease: "easeInOut" },
+                            y: { duration: 20, repeat: Infinity, ease: "easeInOut" },
+                            scale: { duration: 30, repeat: Infinity, ease: "easeInOut" }
                         }}
                     >
-                        <img src={Cloud9} className='w-[450px]' alt="" />
+                        <img src={Cloud9} className='w-[450px]' alt="Cloud 9" />
                     </motion.div>
                 </motion.div>
 

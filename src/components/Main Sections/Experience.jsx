@@ -187,15 +187,15 @@ const Experience = ({ ExperienceRef_Passed, onScrollToExperience }) => {
                                     </div>
                                 }
 
-                                {/* Cloud 17 */}
+                                {/* Cloud 7 */}
                                 {item.key_index === 1 &&
                                     <>
                                         <motion.div
                                             className="pointer-events-none absolute inset-0 -z-20"
                                             style={{ background: "transparent" }}
-                                            initial={{ x: 200, opacity: 0 }}
+                                            initial={{ x: 600, opacity: 0 }}
                                             whileInView={{ x: 0, opacity: 1 }}
-                                            transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
+                                            transition={{ duration: 1.5, ease: "easeOut", delay: 0.5 }}
                                             viewport={{ once: true, amount: 0.4 }}
                                         >
                                             <motion.div
@@ -212,21 +212,21 @@ const Experience = ({ ExperienceRef_Passed, onScrollToExperience }) => {
                                                     scale: { duration: 30, repeat: Infinity, ease: "easeInOut" }
                                                 }}
                                             >
-                                                <img src={Cloud7} className='w-[330px]' alt="" />
+                                                <img src={Cloud7} className='w-[330px]' alt="Cloud 7" />
                                             </motion.div>
                                         </motion.div>
                                     </>
                                 }
 
-                                {/* Cloud 16 */}
+                                {/* Cloud 6 */}
                                 {item.key_index === 2 &&
                                     <>
                                         <motion.div
                                             className="pointer-events-none absolute inset-0 -z-20"
                                             style={{ background: "transparent" }}
-                                            initial={{ x: -400, opacity: 0 }}
+                                            initial={{ x: -600, opacity: 0 }}
                                             whileInView={{ x: 0, opacity: 1 }}
-                                            transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
+                                            transition={{ duration: 1.5, ease: "easeOut", delay: 0.5 }}
                                             viewport={{ once: true, amount: 0.4 }}
                                         >
                                             <motion.div
@@ -243,7 +243,7 @@ const Experience = ({ ExperienceRef_Passed, onScrollToExperience }) => {
                                                     scale: { duration: 30, repeat: Infinity, ease: "easeInOut" }
                                                 }}
                                             >
-                                                <img src={Cloud6} className='w-[300px]' alt="" />
+                                                <img src={Cloud6} className='w-[300px]' alt="Cloud 6" />
                                             </motion.div>
                                         </motion.div>
                                     </>

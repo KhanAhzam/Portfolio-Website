@@ -183,15 +183,15 @@ const Projects = ({ ProjectsRef_Passed }) => {
 
                             </motion.div>
 
-                            {/* Cloud 11 */}
+                            {/* Cloud 10 */}
                             {Proj_index === 0 &&
                                 <motion.div
                                     className="pointer-events-none absolute inset-0 -z-20"
                                     style={{ background: "transparent" }}
                                     initial={{ x: 300, opacity: 0 }}
                                     whileInView={{ x: 0, opacity: 1 }}
-                                    transition={{ duration: 1.5, ease: "easeOut", delay: 0.8 }}
-                                    viewport={{ once: true, amount: 0.1 }}
+                                    transition={{ duration: 1.5, ease: "easeOut", delay: 0.5 }}
+                                    viewport={{ once: true, amount: 0.4 }}
                                 >
                                     <motion.div
                                         className='absolute -top-[20%] -right-[16%]'
@@ -207,20 +207,20 @@ const Projects = ({ ProjectsRef_Passed }) => {
                                             scale: { duration: 30, repeat: Infinity, ease: "easeInOut" }
                                         }}
                                     >
-                                        <img src={Cloud10} className='w-[350px]' alt="" />
+                                        <img src={Cloud10} className='w-[350px]' alt="Cloud 10" />
                                     </motion.div>
                                 </motion.div>
                             }
 
-                            {/* Cloud 6 */}
+                            {/* Cloud 3 */}
                             {Proj_index === 2 &&
                                 <motion.div
                                     className="pointer-events-none absolute inset-0 -z-20"
                                     style={{ background: "transparent" }}
                                     initial={{ x: 200, opacity: 0 }}
                                     whileInView={{ x: 0, opacity: 1 }}
-                                    transition={{ duration: 1.5, ease: "easeOut", delay: 0.8 }}
-                                    viewport={{ once: true, amount: 0.1 }}
+                                    transition={{ duration: 1.5, ease: "easeOut", delay: 0.5 }}
+                                    viewport={{ once: true, amount: 0.4 }}
                                 >
                                     <motion.div
                                         className='absolute -top-[20%] -right-[25%]'
@@ -236,7 +236,7 @@ const Projects = ({ ProjectsRef_Passed }) => {
                                             scale: { duration: 30, repeat: Infinity, ease: "easeInOut" }
                                         }}
                                     >
-                                        <img src={Cloud3} className='w-[450px]' alt="" />
+                                        <img src={Cloud3} className='w-[450px]' alt="Cloud 3" />
                                     </motion.div>
                                 </motion.div>
                             }
@@ -248,8 +248,8 @@ const Projects = ({ ProjectsRef_Passed }) => {
                                     style={{ background: "transparent" }}
                                     initial={{ x: -200, opacity: 0 }}
                                     whileInView={{ x: 0, opacity: 1 }}
-                                    transition={{ duration: 1.5, ease: "easeOut", delay: 0.8 }}
-                                    viewport={{ once: true, amount: 0.1 }}
+                                    transition={{ duration: 1.5, ease: "easeOut", delay: 0.5 }}
+                                    viewport={{ once: true, amount: 0.4 }}
                                 >
                                     <motion.div
                                         className='absolute -top-[20%] -left-[24%]'
@@ -265,20 +265,20 @@ const Projects = ({ ProjectsRef_Passed }) => {
                                             scale: { duration: 30, repeat: Infinity, ease: "easeInOut" }
                                         }}
                                     >
-                                        <img src={Cloud8} className='w-[400px]' alt="" />
+                                        <img src={Cloud8} className='w-[400px]' alt="Cloud 8" />
                                     </motion.div>
                                 </motion.div>
                             }
 
-                            {/* Cloud 14 */}
+                            {/* Cloud 4 */}
                             {Proj_index === 2 &&
                                 <motion.div
                                     className="pointer-events-none absolute inset-0 -z-20"
                                     style={{ background: "transparent" }}
                                     initial={{ x: -200, opacity: 0 }}
                                     whileInView={{ x: 0, opacity: 1 }}
-                                    transition={{ duration: 1.5, ease: "easeOut", delay: 0.8 }}
-                                    viewport={{ once: true, amount: 0.1 }}
+                                    transition={{ duration: 1.5, ease: "easeOut", delay: 0.5 }}
+                                    viewport={{ once: true, amount: 0.4 }}
                                 >
                                     <motion.div
                                         className='absolute -bottom-[15%] -left-[15%]'
@@ -294,7 +294,7 @@ const Projects = ({ ProjectsRef_Passed }) => {
                                             scale: { duration: 30, repeat: Infinity, ease: "easeInOut" }
                                         }}
                                     >
-                                        <img src={Cloud4} className='w-[350px]' alt="" />
+                                        <img src={Cloud4} className='w-[350px]' alt="Cloud 4" />
                                     </motion.div>
                                 </motion.div>
                             }

@@ -228,13 +228,13 @@ const Skills = ({ SkillsRef_Passed }) => {
                         )
                     )}
 
-                    {/* Cloud 15 */}
+                    {/* Cloud 5 */}
                     <motion.div
                         className="pointer-events-none absolute inset-0 -z-20"
                         style={{ background: "transparent" }}
-                        initial={{ x: 200, opacity: 0 }}
+                        initial={{ x: 500, opacity: 0 }}
                         whileInView={{ x: 0, opacity: 1 }}
-                        transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
+                        transition={{ duration: 1.5, ease: "easeOut", delay: 0.5 }}
                         viewport={{ once: true, amount: 0.4 }}
                     >
                         <motion.div
@@ -246,34 +246,22 @@ const Skills = ({ SkillsRef_Passed }) => {
                                 scale: [1, 1.15, 1]
                             }}
                             transition={{
-                                x: {
-                                    duration: 30,
-                                    repeat: Infinity,
-                                    ease: "easeInOut"
-                                },
-                                y: {
-                                    duration: 15,
-                                    repeat: Infinity,
-                                    ease: "easeInOut"
-                                },
-                                scale: {
-                                    duration: 30,
-                                    repeat: Infinity,
-                                    ease: "easeInOut"
-                                }
+                                x: { duration: 30, repeat: Infinity, ease: "easeInOut" },
+                                y: { duration: 15, repeat: Infinity, ease: "easeInOut" },
+                                scale: { duration: 30, repeat: Infinity, ease: "easeInOut" }
                             }}
                         >
-                            <img src={Cloud5} className='w-[350px]' alt="" />
+                            <img src={Cloud5} className='w-[350px]' alt="Cloud 5" />
                         </motion.div>
                     </motion.div>
 
-                    {/* Cloud 14 */}
+                    {/* Cloud 4 */}
                     <motion.div
                         className="pointer-events-none absolute inset-0 -z-20"
                         style={{ background: "transparent" }}
-                        initial={{ x: -400, opacity: 0 }}
+                        initial={{ x: -500, opacity: 0 }}
                         whileInView={{ x: 0, opacity: 1 }}
-                        transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
+                        transition={{ duration: 1.5, ease: "easeOut", delay: 0.5 }}
                         viewport={{ once: true, amount: 0.4 }}
                     >
                         <motion.div
@@ -285,24 +273,12 @@ const Skills = ({ SkillsRef_Passed }) => {
                                 scale: [1, 1.15, 1]
                             }}
                             transition={{
-                                x: {
-                                    duration: 30,
-                                    repeat: Infinity,
-                                    ease: "easeInOut"
-                                },
-                                y: {
-                                    duration: 15,
-                                    repeat: Infinity,
-                                    ease: "easeInOut"
-                                },
-                                scale: {
-                                    duration: 30,
-                                    repeat: Infinity,
-                                    ease: "easeInOut"
-                                }
+                                x: { duration: 30, repeat: Infinity, ease: "easeInOut" },
+                                y: { duration: 15, repeat: Infinity, ease: "easeInOut" },
+                                scale: { duration: 30, repeat: Infinity, ease: "easeInOut" }
                             }}
                         >
-                            <img src={Cloud4} className='w-[350px]' alt="" />
+                            <img src={Cloud4} className='w-[350px]' alt="Cloud 4" />
                         </motion.div>
                     </motion.div>
 

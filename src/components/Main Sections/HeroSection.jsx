@@ -16,7 +16,7 @@ const HeroSection = ({ HeroSectionRef_Passed, onScrollToAbout, onScrollToSkills,
 
     return (
         <>
-            <div className='min-h-screen flex flex-col justify-between mb-5'>
+            <div ref={HeroSectionRef_Passed} className='min-h-screen flex flex-col justify-between mb-5'>
 
                 {/* Navbar */}
                 <motion.div
@@ -67,7 +67,7 @@ const HeroSection = ({ HeroSectionRef_Passed, onScrollToAbout, onScrollToSkills,
                             style={{ background: "transparent" }}
                             initial={{ x: -600, opacity: 0 }}
                             whileInView={{ x: 0, opacity: 1 }}
-                            transition={{ duration: 1.5, ease: "easeOut", delay: 1 }}
+                            transition={{ duration: 1.5, ease: "easeOut", delay: 0.8 }}
                             viewport={{ once: true, amount: 0.4 }}
                         >
                             <motion.div
@@ -79,35 +79,23 @@ const HeroSection = ({ HeroSectionRef_Passed, onScrollToAbout, onScrollToSkills,
                                     scale: [1, 1.15, 1]
                                 }}
                                 transition={{
-                                    x: {
-                                        duration: 60,
-                                        repeat: Infinity,
-                                        ease: "easeInOut"
-                                    },
-                                    y: {
-                                        duration: 15,
-                                        repeat: Infinity,
-                                        ease: "easeInOut"
-                                    },
-                                    scale: {
-                                        duration: 30,
-                                        repeat: Infinity,
-                                        ease: "easeInOut"
-                                    }
+                                    x: { duration: 60, repeat: Infinity, ease: "easeInOut" },
+                                    y: { duration: 15, repeat: Infinity, ease: "easeInOut" },
+                                    scale: { duration: 30, repeat: Infinity, ease: "easeInOut" }
                                 }}
                             >
-                                <img src={Cloud1} className='w-[550px]' alt="" />
+                                <img src={Cloud1} className='w-[550px]' alt="Cloud 1" />
                             </motion.div>
 
                         </motion.div>
 
-                        {/* Cloud 6 */}
+                        {/* Cloud 3 */}
                         <motion.div
                             className="pointer-events-none absolute inset-0 -z-20"
                             style={{ background: "transparent" }}
                             initial={{ x: 500, opacity: 0 }}
                             whileInView={{ x: 0, opacity: 1 }}
-                            transition={{ duration: 1.5, ease: "easeOut", delay: 1 }}
+                            transition={{ duration: 1.5, ease: "easeOut", delay: 0.8 }}
                             viewport={{ once: true, amount: 0.4 }}
                         >
                             <motion.div
@@ -119,34 +107,22 @@ const HeroSection = ({ HeroSectionRef_Passed, onScrollToAbout, onScrollToSkills,
                                     scale: [1, 1.15, 1]
                                 }}
                                 transition={{
-                                    x: {
-                                        duration: 60,
-                                        repeat: Infinity,
-                                        ease: "easeInOut"
-                                    },
-                                    y: {
-                                        duration: 15,
-                                        repeat: Infinity,
-                                        ease: "easeInOut"
-                                    },
-                                    scale: {
-                                        duration: 30,
-                                        repeat: Infinity,
-                                        ease: "easeInOut"
-                                    }
+                                    x: { duration: 60, repeat: Infinity, ease: "easeInOut" },
+                                    y: { duration: 15, repeat: Infinity, ease: "easeInOut" },
+                                    scale: { duration: 30, repeat: Infinity, ease: "easeInOut" }
                                 }}
                             >
-                                <img src={Cloud3} className='w-[550px]' alt="" />
+                                <img src={Cloud3} className='w-[550px]' alt="Cloud 3" />
                             </motion.div>
                         </motion.div>
 
-                        {/* Cloud 4 */}
+                        {/* Cloud 2 */}
                         <motion.div
                             className="pointer-events-none absolute inset-0 -z-20"
                             style={{ background: "transparent" }}
                             initial={{ x: 500, opacity: 0 }}
                             whileInView={{ x: 0, opacity: 1 }}
-                            transition={{ duration: 1.5, ease: "easeOut", delay: 1 }}
+                            transition={{ duration: 1.5, ease: "easeOut", delay: 0.8 }}
                             viewport={{ once: true, amount: 0.4 }}
                         >
                             <motion.div
@@ -158,24 +134,12 @@ const HeroSection = ({ HeroSectionRef_Passed, onScrollToAbout, onScrollToSkills,
                                     scale: [1, 1.15, 1]
                                 }}
                                 transition={{
-                                    x: {
-                                        duration: 60,
-                                        repeat: Infinity,
-                                        ease: "easeInOut"
-                                    },
-                                    y: {
-                                        duration: 20,
-                                        repeat: Infinity,
-                                        ease: "easeInOut"
-                                    },
-                                    scale: {
-                                        duration: 30,
-                                        repeat: Infinity,
-                                        ease: "easeInOut"
-                                    }
+                                    x: { duration: 60, repeat: Infinity, ease: "easeInOut" },
+                                    y: { duration: 20, repeat: Infinity, ease: "easeInOut" },
+                                    scale: { duration: 30, repeat: Infinity, ease: "easeInOut" }
                                 }}
                             >
-                                <img src={Cloud2} className='w-[500px]' alt="" />
+                                <img src={Cloud2} className='w-[500px]' alt="Cloud 2" />
                             </motion.div>
                         </motion.div>
 

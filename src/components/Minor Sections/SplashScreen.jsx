@@ -18,7 +18,7 @@ const Splashscreen = () => {
         visible: {
             opacity: 1,                                 // when visible, the container itself becomes visible
             transition: {
-                staggerChildren: 0.1,                   // every child (letter) starts 0.1s after the previous one
+                staggerChildren: 0.15,                   // every child (letter) starts 0.1s after the previous one
             },
         },
     };
@@ -39,24 +39,24 @@ const Splashscreen = () => {
         <>
             <div className="relative overflow-hidden">
 
+                {/* Text Animation */}
                 <motion.div
                     className="flex items-center justify-center min-h-screen overflow-hidden"
                     variants={container}
                     initial="hidden"
                     animate="visible"
                 >
-                    <motion.span 
+                    <motion.span
                         className="text-black font-bold text-9xl pb-20 flex"
-                        initial={{ y: 0, opacity: 1, scale: 1 }}
+                        initial={{ y: 0, scale: 1 }}
                         animate={{
                             y: -500,
                             scale: 0.6
-                            // opacity: 0,
                         }}
                         transition={{
                             delay: 2.5,                                                                 // wait until letters are in, adding a 2.5s delay
-                            duration: 0.5,
-                            ease: "easeInOut",
+                            duration: 0.7,
+                            ease: "easeIn",
                         }}>
                         {text.split("").map((char, index) => (
 
@@ -68,43 +68,51 @@ const Splashscreen = () => {
                     </motion.span>
                 </motion.div>
 
-
-
-
-
-
-
-                {/* Cloud 9 */}
+                {/* Cloud 8 - Top Right */}
                 <div className="pointer-events-none absolute inset-0 z-10"
                     style={{ background: "transparent" }}
                 >
                     <motion.div
-                        className='absolute -bottom-[8%] -right-[15%]'
-                        initial={{ x: 0, y: 0, scale: 1, rotate: -5 }}
+                        className='absolute top-[10%] right-[5%]'
+                        initial={{ x: 0, y: 0, scale: 1, rotate: 10 }}
                         animate={{
-                            x: [0, 5, 0, -5, 0],
+                            x: [0, 15, 0, -15, 0],
                             y: [0, -15, 0, 15, 0],
                             scale: [1, 1.05, 1]
                         }}
                         transition={{
                             x: { duration: 30, repeat: Infinity, ease: "easeInOut" },
-                            y: { duration: 18, repeat: Infinity, ease: "easeInOut" },
+                            y: { duration: 10, repeat: Infinity, ease: "easeInOut" },
                             scale: { duration: 60, repeat: Infinity, ease: "easeInOut" }
                         }}
                     >
-                        <img src={Cloud8} className='w-[1150px]' alt="" />
+                        <motion.img
+                            src={Cloud8}
+                            className='w-[600px]'
+                            alt="Cloud 8"
+                            initial={{ y: 0, scale: 1 }}
+                            animate={{
+                                y: -1000,
+                                scale: 0.3
+                            }}
+                            transition={{
+                                delay: 2.5,
+                                duration: 1.5,
+                                ease: "easeIn",
+                            }}
+                        />
                     </motion.div>
                 </div>
 
-                {/* Cloud 8 */}
+                {/* Cloud 9 - Bottom Center */}
                 <div className="pointer-events-none absolute inset-0 -z-10"
                     style={{ background: "transparent" }}
                 >
                     <motion.div
-                        className='absolute -bottom-[15%] right-[5%]'
-                        initial={{ x: 0, y: 0, scale: 1, rotate: 10, scaleX: -1 }}
+                        className='absolute bottom-[5%] left-[35%]'
+                        initial={{ x: 0, y: 0, scale: 1, rotate: 0 }}
                         animate={{
-                            x: [0, 5, 0, -5, 0],
+                            x: [0, 15, 0, -15, 0],
                             y: [0, -19, 0, 19, 0],
                             scale: [1, 1.05, 1]
                         }}
@@ -114,19 +122,33 @@ const Splashscreen = () => {
                             scale: { duration: 60, repeat: Infinity, ease: "easeInOut" }
                         }}
                     >
-                        <img src={Cloud2} className='w-[1100px]' alt="" />
+                        <motion.img
+                            src={Cloud9}
+                            className='w-[600px]'
+                            alt="Cloud 9"
+                            initial={{ y: 0, scale: 1 }}
+                            animate={{
+                                y: 1000,
+                                scale: 0.3
+                            }}
+                            transition={{
+                                delay: 2.5,
+                                duration: 1.5,
+                                ease: "easeIn",
+                            }}
+                        />
                     </motion.div>
                 </div>
 
-                {/* Cloud 3 */}
+                {/* Cloud 3 - Bottom Left*/}
                 <div className="pointer-events-none absolute inset-0 -z-20"
                     style={{ background: "transparent" }}
                 >
                     <motion.div
-                        className='absolute -bottom-[15%] left-[25%]'
-                        initial={{ x: 0, y: 0, scale: 1, rotate: 10 }}
+                        className='absolute bottom-[25%] left-[5%]'
+                        initial={{ x: 0, y: 0, scale: 1, rotate: 0 }}
                         animate={{
-                            x: [0, 5, 0, -5, 0],
+                            x: [0, 15, 0, -15, 0],
                             y: [0, -7, 0, 7, 0],
                             scale: [1, 1.05, 1]
                         }}
@@ -136,19 +158,33 @@ const Splashscreen = () => {
                             scale: { duration: 60, repeat: Infinity, ease: "easeInOut" }
                         }}
                     >
-                        <img src={Cloud3} className='w-[1250px]' alt="" />
+                        <motion.img
+                            src={Cloud3}
+                            className='w-[650px]'
+                            alt="Cloud 3"
+                            initial={{ y: 0, scale: 1 }}
+                            animate={{
+                                y: 1000,
+                                scale: 0.3
+                            }}
+                            transition={{
+                                delay: 2.5,
+                                duration: 1.5,
+                                ease: "easeIn",
+                            }}
+                        />
                     </motion.div>
                 </div>
 
-                {/* Cloud 2 */}
+                {/* Cloud 12 - Bottom Right */}
                 <div className="pointer-events-none absolute inset-0 -z-20"
                     style={{ background: "transparent" }}
                 >
                     <motion.div
-                        className='absolute -bottom-[15%] left-[10%]'
-                        initial={{ x: 0, y: 0, scale: 1, rotate: 5 }}
+                        className='absolute bottom-[20%] right-[5%]'
+                        initial={{ x: 0, y: 0, scale: 1, rotate: 15, scaleX: -1 }}
                         animate={{
-                            x: [0, 5, 0, -5, 0],
+                            x: [0, 15, 0, -15, 0],
                             y: [0, -12, 0, 12, 0],
                             scale: [1, 1.05, 1]
                         }}
@@ -158,19 +194,33 @@ const Splashscreen = () => {
                             scale: { duration: 60, repeat: Infinity, ease: "easeInOut" }
                         }}
                     >
-                        <img src={Cloud2} className='w-[1100px]' alt="" />
+                        <motion.img
+                            src={Cloud12}
+                            className='w-[600px]'
+                            alt="Cloud 12"
+                            initial={{ y: 0, scale: 1 }}
+                            animate={{
+                                y: 1000,
+                                scale: 0.3
+                            }}
+                            transition={{
+                                delay: 2.5,
+                                duration: 1.5,
+                                ease: "easeIn",
+                            }}
+                        />
                     </motion.div>
                 </div>
 
-                {/* Cloud 1 */}
+                {/* Cloud 1 - Top Left */}
                 <div className="pointer-events-none absolute inset-0 -z-20"
                     style={{ background: "transparent" }}
                 >
                     <motion.div
-                        className='absolute -bottom-[14%] -left-[10%]'
+                        className='absolute top-[5%] left-[5%]'
                         initial={{ x: 0, y: 0, scale: 1, rotate: 10 }}
                         animate={{
-                            x: [0, 5, 0, -5, 0],
+                            x: [0, 15, 0, -15, 0],
                             y: [0, -18, 0, 18, 0],
                             scale: [1, 1.05, 1]
                         }}
@@ -180,7 +230,21 @@ const Splashscreen = () => {
                             scale: { duration: 60, repeat: Infinity, ease: "easeInOut" }
                         }}
                     >
-                        <img src={Cloud1} className='w-[1100px]' alt="" />
+                        <motion.img
+                            src={Cloud1}
+                            className='w-[600px]'
+                            alt="Cloud 1"
+                            initial={{ y: 0, scale: 1 }}
+                            animate={{
+                                y: -1000,
+                                scale: 0.3
+                            }}
+                            transition={{
+                                delay: 2.5,
+                                duration: 1.5,
+                                ease: "easeIn",
+                            }}
+                        />
                     </motion.div>
                 </div>
 
