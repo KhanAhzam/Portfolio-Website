@@ -8,12 +8,6 @@ import { PiCertificate } from "react-icons/pi";
 import Cloud6 from "../../assets/Clouds/6.png";
 import Cloud7 from "../../assets/Clouds/7.png";
 
-
-
-// DRDO CERTIFICATE ADD
-
-
-
 const Experience = ({ ExperienceRef_Passed, onScrollToExperience }) => {
 
     const Exp_list = [
@@ -49,7 +43,7 @@ const Experience = ({ ExperienceRef_Passed, onScrollToExperience }) => {
                 "Implemented secure API key management with environment variables, ensured reproducible installations with `requirements.txt`, and adapted the codebase for use in both restricted networks and cloud environments."
             ],
             skills: ["Python", "LangChain", "ChromaDB", "ReportLab", "BeautifulSoup", "Pillow", "Streamlit", "Groq API", "PyMuPDF", "Ollama", "dotenv", "Git", "Github"],
-            certi_link: ""
+            certi_link: "https://drive.google.com/file/d/1Mzzzo77h4_6xmkt-3djA5dTeiuFyFguh/view?usp=drive_link"
         }
     ]
 
