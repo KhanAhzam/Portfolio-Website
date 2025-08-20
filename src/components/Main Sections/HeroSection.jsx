@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 
 import { motion } from "framer-motion"
 
-import { MapPin, MoveDown, Download, Bold } from 'lucide-react';
+import { MapPin, MoveDown } from 'lucide-react';
 
 import Cloud1 from "../../assets/Clouds/1.jpg";
 import Cloud2 from "../../assets/Clouds/2.jpg";

@@ -66,6 +66,9 @@ const Skills = ({ SkillsRef_Passed }) => {
         }
     ]
 
+    const More_skills = ["Framer-Motion", "Git", "GitHub", "Mongoose", "RESTful APIs", "Vercel", "Netlify", "Postman", "Python", "Streamlit", "Groq API", "Langchain", "dotenv", "Ollama", "Gemini API"]
+
+
     useEffect(() => {
         if (!MoreSkills) return;               // If popup was closed by user then it wont work, as it is the case where MoreSkills will be false
 
@@ -83,8 +86,6 @@ const Skills = ({ SkillsRef_Passed }) => {
         return () => window.removeEventListener('scroll', onScroll);
 
     }, [MoreSkills]);
-
-    const More_skills = ["Framer-Motion", "Git", "GitHub", "Mongoose", "RESTful APIs", "Vercel", "Netlify", "Postman", "Python", "Streamlit", "Groq API", "Langchain", "dotenv", "Ollama", "Gemini API"]
 
     return (
         <>

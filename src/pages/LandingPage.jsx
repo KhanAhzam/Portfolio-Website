@@ -19,6 +19,7 @@ import Experience from '../components/Main Sections/Experience'
 import Projects from '../components/Main Sections/Projects'
 import Contact from '../components/Main Sections/Contact'
 import Footer from '../components/Minor Sections/Footer';
+import GoToTopBtn from '../components/Minor Sections/GoToTopBtn';
 
 const LandingPage = () => {
 
@@ -60,6 +61,11 @@ const LandingPage = () => {
           onScrollToExperience={ScrollToExperience}
           onScrollToProjects={ScrollToProjects}
           onScrollToContact={ScrollToContact}
+        />
+
+        {/* Go To Top Button */}
+        <GoToTopBtn
+          onScrollToHeroSection={ScrollToHeroSection}
         />
 
         {/* About */}

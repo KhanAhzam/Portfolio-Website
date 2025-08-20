@@ -188,9 +188,9 @@ const Projects = ({ ProjectsRef_Passed }) => {
                                 <motion.div
                                     className="pointer-events-none absolute inset-0 -z-20"
                                     style={{ background: "transparent" }}
-                                    initial={{ x: 300, opacity: 0 }}
+                                    initial={{ x: 400, opacity: 0 }}
                                     whileInView={{ x: 0, opacity: 1 }}
-                                    transition={{ duration: 1.5, ease: "easeOut", delay: 0.5 }}
+                                    transition={{ duration: 1.5, ease: "easeOut", delay: 0.8 }}
                                     viewport={{ once: true, amount: 0.4 }}
                                 >
                                     <motion.div
