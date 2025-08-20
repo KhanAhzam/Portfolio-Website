@@ -51,7 +51,7 @@ const LandingPage = () => {
 
   return (
     <>
-      <div className='overflow-x-hidden'>
+      <div className='overflow-x-hidden font-urbanist'>
 
         {/* Hero */}
         <HeroSection

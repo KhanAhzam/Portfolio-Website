@@ -37,7 +37,7 @@ const Splashscreen = () => {
 
     return (
         <>
-            <div className="relative overflow-hidden">
+            <div className="relative overflow-hidden font-urbanist">
 
                 {/* Text Animation */}
                 <motion.div

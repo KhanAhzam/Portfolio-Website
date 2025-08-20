@@ -6,8 +6,26 @@ export default {
   ],
   theme: {
     extend: {
-      fontFamily:{
-        kulfam:["Kufam", "sans-serif"]
+
+      // To use google fonts with Tailwind first import into index.css and then add here under extend
+
+      fontFamily: {
+        quicksand: ["Quicksand", "sans-serif"],
+        nunito: ["Nunito", "sans-serif"],
+        raleway: ["Raleway", "sans-serif"],
+        exo2: ["Exo 2", "sans-serif"],
+        fredoka: ["Fredoka", "sans-serif"],
+        baloo2: ["Baloo 2", "sans-serif"],
+        
+        // Being Used
+        urbanist: ["Urbanist", "sans-serif"],
+
+        manrope: ["Manrope", "sans-serif"],
+        outfit: ["Outfit", "sans-serif"],
+        sora: ["Sora", "sans-serif"],
+        montserrat: ["Montserrat", "sans-serif"],
+        cabin: ["Cabin", "sans-serif"],
+        rubik: ["Rubik", "sans-serif"],
       },
       screens: {
         xs: '450px'

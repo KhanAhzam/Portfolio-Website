@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { Download, Contact, Sun, Moon } from 'lucide-react';
 
 const Navbar = ({ onScrollToAbout_Passed, onScrollToSkills_Passed, onScrollToExperience_Passed, onScrollToProjects_Passed, onScrollToContact_Passed }) => {
-    
+
     const [isDark, setIsDark] = useState(false);
 
     const navItems = [
@@ -23,8 +23,27 @@ const Navbar = ({ onScrollToAbout_Passed, onScrollToSkills_Passed, onScrollToExp
                 <div className="1-Left flex gap-32 leading-none items-center">
 
                     {/* Logo */}
-                    <div className="logo pl-16 text-3xl font-bold leading-none">
-                        <span>Ahzam</span>
+                    <div
+                        className="logo pl-16 text-4xl font-black leading-none"
+                    >
+                        <motion.span
+                            className='inline-block cursor-pointer'
+                            whileHover={{
+                                scale: 1.2,
+                                transition: {
+                                    duration: 0.4
+                                }
+                            }}
+                            whileTap={{
+                                scale: 0.8,
+                                transition: {
+                                    duration: 0.4
+                                }
+                            }}
+                            onClick={() => window.location.href = "/"}
+                        >
+                            Ahzam.
+                        </motion.span>
                     </div>
 
                     {/* Navbar Main Options */}
@@ -33,7 +52,7 @@ const Navbar = ({ onScrollToAbout_Passed, onScrollToSkills_Passed, onScrollToExp
                             <motion.li
                                 key={idx}
                                 onClick={item.onClick}
-                                className="relative cursor-pointer px-5 py-1.5 overflow-hidden"
+                                className="relative cursor-pointer px-5 py-1.5 pt-2 overflow-hidden"
                                 initial="rest"
                                 whileHover="hover"
                                 animate="rest"
@@ -127,7 +146,7 @@ const Navbar = ({ onScrollToAbout_Passed, onScrollToSkills_Passed, onScrollToExp
                         </a>
 
                         {/* Contact */}
-                        <div 
+                        <div
                             className="Contact text-white font-bold text-xl"
                             onClick={onScrollToContact_Passed}
                         >

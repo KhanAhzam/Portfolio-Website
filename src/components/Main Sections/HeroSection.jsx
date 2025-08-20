@@ -45,7 +45,7 @@ const HeroSection = ({ HeroSectionRef_Passed, onScrollToAbout, onScrollToSkills,
                     {/* Text */}
                     <div className="text flex flex-col w-[800px] justify-center">
 
-                        <span className='font-bold text-xl pl-5'>Hello, I am</span>
+                        <span className='font-extrabold text-2xl pl-5'>Hello, I am</span>
                         <span className='font-bold text-9xl'>Ahzam Khan</span>
 
                         <div className='pt-4 pl-8'>
@@ -56,10 +56,10 @@ const HeroSection = ({ HeroSectionRef_Passed, onScrollToAbout, onScrollToSkills,
 
                         <span className='font-medium text-[22px] pt-14 text-gray-800 pl-4'>Full Stack Developer creating standout web apps with clean code, sleek design, and smooth functionality.</span>
 
-                        <div className='flex items-center pt-8 gap-2'>
+                        <motion.div className='flex items-center pt-8 gap-2'>
                             <MapPin size={35} />
                             <span className=' font-bold text-2xl'>New Delhi, India</span>
-                        </div>
+                        </motion.div>
 
                         {/* Cloud 1 */}
                         <motion.div
