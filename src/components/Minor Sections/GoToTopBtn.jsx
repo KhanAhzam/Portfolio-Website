@@ -9,7 +9,7 @@ const GoToTopBtn = ({ onScrollToHeroSection }) => {
     return (
         <>
             <motion.div
-                className="bg-black fixed bottom-10 right-4 p-3 cursor-pointer text-white rounded-full flex items-center justify-center"
+                className="bg-black fixed bottom-14 right-4 p-3 cursor-pointer text-white rounded-full flex items-center justify-center"
                 onClick={onScrollToHeroSection}
                 initial={{ x: 200, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}

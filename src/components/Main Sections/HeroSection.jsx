@@ -179,7 +179,7 @@ const HeroSection = ({ HeroSectionRef_Passed, onScrollToAbout, onScrollToSkills,
 
                 {/* Links */}
                 <motion.div
-                    className="fixed bottom-10 left-4"
+                    className="fixed bottom-14 left-4"
                     initial={{ x: -200, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
