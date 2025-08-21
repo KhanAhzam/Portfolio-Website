@@ -29,6 +29,7 @@ export default {
         "smaller": "400px",
         xs: "450px",
         "3xl": "1650px",
+        "4xl": "1850px",
         "large": "1150px",
       }
     },

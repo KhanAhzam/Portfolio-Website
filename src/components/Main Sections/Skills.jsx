@@ -15,6 +15,16 @@ const Skills = ({ SkillsRef_Passed }) => {
 
     const [IsIndex, setIsIndex] = useState(null);
     const [MoreSkills, setMoreSkills] = useState(false);
+    const [showMobileMoreSkills, setShowMobileMoreSkills] = useState(false);
+    const [showDesktopMoreSkills, setShowDesktopMoreSkills] = useState(false);
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
+
+    useEffect(() => {
+        const handleResize = () => setIsMobile(window.innerWidth < 1024);
+        window.addEventListener("resize", handleResize);                                    //We use the resize event listener because the value of window.innerWidth can change while the user is on your site (if they resize the browser or rotate a tablet/phone).
+        return () => window.removeEventListener("resize", handleResize);                    //window.addEventListener("resize", handleResize) ensures that isMobile updates anytime the window is resized.
+    }, []);                                                                                 //Runs this function as soon as this component mounts the DOM, it checks whether isMobile state will be true or false 
+
 
     const skills_Arr = [
         {
@@ -68,16 +78,15 @@ const Skills = ({ SkillsRef_Passed }) => {
 
     const More_skills = ["Framer-Motion", "Git", "GitHub", "Mongoose", "RESTful APIs", "Vercel", "Netlify", "Postman", "Python", "Streamlit", "Groq API", "Langchain", "dotenv", "Ollama", "Gemini API"]
 
-
     useEffect(() => {
-        if (!MoreSkills) return;               // If popup was closed by user then it wont work, as it is the case where MoreSkills will be false
+        if (!showDesktopMoreSkills) return;               // If popup was closed by user then it wont work, as it is the case where MoreSkills will be false
 
         const startY = window.scrollY;         // where user was when popup opened
         const threshold = 250;                 // px of movement before closing
 
         const onScroll = () => {
             if (Math.abs(window.scrollY - startY) >= threshold) {
-                setMoreSkills(false);
+                setShowDesktopMoreSkills(false);
             }
         };
 
@@ -85,12 +94,12 @@ const Skills = ({ SkillsRef_Passed }) => {
 
         return () => window.removeEventListener('scroll', onScroll);
 
-    }, [MoreSkills]);
+    }, [showDesktopMoreSkills]);
 
     return (
         <>
             <div
-                className=' container mx-auto min-h-screen w-[1400px] p-10'
+                className=' container mx-auto min-h-screen max-w-[1400px] p-10'
                 ref={SkillsRef_Passed}
             >
 
@@ -105,13 +114,145 @@ const Skills = ({ SkillsRef_Passed }) => {
                     Skills.
                 </motion.div>
 
-                {/* Content */}
-                <motion.div
-                    className="relative my-10 px-16 grid grid-cols-4 text-center gap-y-[52px]"
+                {/* Content for mobile devices below md:768px */}
+                <motion.div className="md:hidden relative my-10 px-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center gap-y-[26px]"
                     initial={{ x: 300, opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }}
                     transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
-                    viewport={{ once: true, amount: 0.3 }}
+                    viewport={{ once: true, amount: 0 }}
+                >
+
+                    {/* Mapping Array */}
+                    {skills_Arr.map((item, index) =>
+
+                        item.skill_name.toLowerCase() === "more skills" ? (
+
+                            // Explore More Skills Options
+                            <div
+                                className="w-[300px] smaller:w-[350px] sm:w-[450px] h-[220px] rounded-[30px] text-white bg-black cursor-pointer flex flex-col items-center justify-evenly p-5 origin-left"
+                            >
+
+                                {/* Text */}
+                                <div className="font-bold pb-4 sm:pb-8 text-3xl smaller:text-4xl text-center"
+                                    key="text"
+                                >
+                                    Explore My Other Skills!
+                                </div>
+
+                                {/* Button */}
+                                <motion.button className="w-[150px] h-[50px] bg-white rounded-3xl"
+                                    key="btn"
+                                    whileTap={{ scale: 0.7, transition: { duration: 0.2 } }}
+                                    onClick={() => setShowMobileMoreSkills(true)}
+                                >
+                                    <span className='text-black font-bold text-4xl'>Go!</span>
+                                </motion.button>
+
+                            </div>
+
+                        ) : (
+
+                            // Normal Skills Boxes
+                            <div className="relative w-[250px] h-[220px] lg:h-[180px]">
+                                <motion.div
+                                    className="absolute top-0 left-0 w-full h-full rounded-[30px] text-white bg-black cursor-pointer flex flex-col items-center p-3"
+                                    animate={{
+                                        height: isMobile ? 220 : IsIndex === index ? 220 : 180,
+                                    }}
+                                    transition={{ duration: 0.4, ease: "easeOut" }}
+                                    onHoverStart={() => !isMobile && setIsIndex(index)}
+                                    onHoverEnd={() => !isMobile && setIsIndex(null)}
+                                >
+                                    {/* Icon */}
+                                    <div className="pt-10">{item.skill_icon}</div>
+
+                                    {/* Text */}
+                                    <motion.span
+                                        initial={{ opacity: 0, y: 10 }}
+                                        whileInView={isMobile ? { opacity: 1, y: 0 } : {}}
+                                        animate={
+                                            isMobile
+                                                ? {}
+                                                : {
+                                                    opacity: IsIndex === index ? 1 : 0,                     //hover logic is been handled at the parent motion.div level, in onHoverStart and onHoverEnd
+                                                    y: IsIndex === index ? 0 : 10,
+                                                }
+                                        }
+                                        transition={{ duration: 0.4, ease: "easeOut" }}
+                                        viewport={{ once: true, amount: 1 }}
+                                        className="mt-6 text-3xl font-semibold"
+                                    >
+                                        {item.skill_name}
+                                    </motion.span>
+                                </motion.div>
+                            </div>
+
+                        )
+                    )}
+
+                    {/* Cloud 5 */}
+                    <motion.div
+                        className="pointer-events-none absolute inset-0 -z-20"
+                        style={{ background: "transparent" }}
+                        initial={{ x: 500, opacity: 0 }}
+                        whileInView={{ x: 0, opacity: 1 }}
+                        transition={{ duration: 1.5, ease: "easeOut", delay: 0.5 }}
+                        viewport={{ once: true, amount: 0.4 }}
+                    >
+                        <motion.div
+                            className='absolute -top-[15%] -right-[10%]'
+                            initial={{ x: 0, y: 0, scale: 1, rotate: 13 }}
+                            animate={{
+                                x: [0, 5, 0, -5, 0],
+                                y: [0, -10, 0, 10, 0],
+                                scale: [1, 1.15, 1]
+                            }}
+                            transition={{
+                                x: { duration: 30, repeat: Infinity, ease: "easeInOut" },
+                                y: { duration: 15, repeat: Infinity, ease: "easeInOut" },
+                                scale: { duration: 30, repeat: Infinity, ease: "easeInOut" }
+                            }}
+                        >
+                            <img src={Cloud5} className='w-[350px]' alt="Cloud 5" />
+                        </motion.div>
+                    </motion.div>
+
+                    {/* Cloud 4 */}
+                    <motion.div
+                        className="pointer-events-none absolute inset-0 -z-20"
+                        style={{ background: "transparent" }}
+                        initial={{ x: -500, opacity: 0 }}
+                        whileInView={{ x: 0, opacity: 1 }}
+                        transition={{ duration: 1.5, ease: "easeOut", delay: 0.5 }}
+                        viewport={{ once: true, amount: 0.4 }}
+                    >
+                        <motion.div
+                            className='absolute -bottom-[8%] -left-[10%]'
+                            initial={{ x: 0, y: 0, scale: 1, rotate: -15, scaleX: -1 }}
+                            animate={{
+                                x: [0, 5, 0, -5, 0],
+                                y: [0, -10, 0, 10, 0],
+                                scale: [1, 1.15, 1]
+                            }}
+                            transition={{
+                                x: { duration: 30, repeat: Infinity, ease: "easeInOut" },
+                                y: { duration: 15, repeat: Infinity, ease: "easeInOut" },
+                                scale: { duration: 30, repeat: Infinity, ease: "easeInOut" }
+                            }}
+                        >
+                            <img src={Cloud4} className='w-[350px]' alt="Cloud 4" />
+                        </motion.div>
+                    </motion.div>
+
+
+                </motion.div>
+
+                {/* Content for desktop devices above md:768px */}
+                <motion.div className="hidden relative my-10 px-16 md:grid grid-cols-1 xl:grid-cols-2 4xl:grid-cols-4 text-center gap-y-[52px] justify-items-center 4xl:justify-items-start"
+                    initial={{ x: 300, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+                    viewport={{ once: true, amount: 0 }}
                 >
 
                     {/* Mapping Array */}
@@ -182,7 +323,7 @@ const Skills = ({ SkillsRef_Passed }) => {
                                                 }}
                                                 whileHover={{ scale: 1.2, transition: { duration: 0.3 } }}
                                                 whileTap={{ scale: 0.8, transition: { duration: 0.1 } }}
-                                                onClick={() => setMoreSkills(true)}
+                                                onClick={() => setShowDesktopMoreSkills(true)}
                                             >
                                                 <span className='text-black font-bold text-4xl'>Go!</span>
                                             </motion.button>
@@ -286,8 +427,8 @@ const Skills = ({ SkillsRef_Passed }) => {
 
                 </motion.div>
 
-                {/* More Sills Box */}
-                {MoreSkills &&
+                {/* Desktop More Skills Box */}
+                {showDesktopMoreSkills &&
                     <div className='fixed inset-0 flex justify-center items-center z-50'>
                         <div className='bg-white mr-12 w-[600px] h-fit rounded-[40px] px-16 pt-8 pb-10 text-white flex flex-col justify-between shadow-[0_0_80px_rgba(0,0,0,0.95)]'>
 
@@ -303,7 +444,7 @@ const Skills = ({ SkillsRef_Passed }) => {
                                         scale: 0.7,
                                         transition: { duration: 0.1, ease: "easeIn" }
                                     }}
-                                    onClick={() => setMoreSkills(false)}
+                                    onClick={() => setShowDesktopMoreSkills(false)}
                                 >
                                     <RxCross1 fontSize={40} />
                                 </motion.span>
@@ -335,6 +476,59 @@ const Skills = ({ SkillsRef_Passed }) => {
                         </div>
                     </div>
                 }
+
+                {/* Mobile More Skills Box */}
+                <AnimatePresence>
+                    {showMobileMoreSkills && (
+                        <motion.div
+                            className="fixed inset-0 bg-white z-50 flex flex-col px-8 pt-8 pb-10"
+                            initial={{ x: "-100%" }}      // start off-screen (left)
+                            animate={{ x: 0 }}            // slide to full screen
+                            exit={{ x: "100%" }}          // slide out to right
+                            transition={{ duration: 0.5, ease: "easeInOut" }}
+                        >
+                            {/* Quit Button */}
+                            <div className="flex justify-end">
+                                <motion.span
+                                    className="cursor-pointer px-2 py-2 rounded-full text-black"
+                                    whileHover={{
+                                        scale: 1.35,
+                                        transition: { duration: 0.3, ease: "easeOut" }
+                                    }}
+                                    whileTap={{
+                                        scale: 0.7,
+                                        transition: { duration: 0.1, ease: "easeIn" }
+                                    }}
+                                    onClick={() => setShowMobileMoreSkills(false)}
+                                >
+                                    <RxCross1 fontSize={40} />
+                                </motion.span>
+                            </div>
+
+                            {/* Text */}
+                            <div className="text-4xl md:text-5xl text-black font-extrabold mt-5 mb-10 text-center smaller:text-left">
+                                Other Skills I Use
+                            </div>
+
+                            {/* Skills */}
+                            <div className="flex flex-wrap gap-y-2 gap-x-2">
+                                {More_skills.map((item) => (
+                                    <motion.div
+                                        key={item}
+                                        className="font-bold text-xl md:text-2xl my-1 bg-blue-500 w-fit px-5 py-2 rounded-[20px] cursor-pointer text-white"
+                                        whileHover={{
+                                            scale: 1.15,
+                                            transition: { duration: 0.3 }
+                                        }}
+                                    >
+                                        {item}
+                                    </motion.div>
+                                ))}
+                            </div>
+                        </motion.div>
+                    )}
+                </AnimatePresence>
+
 
             </div>
         </>
