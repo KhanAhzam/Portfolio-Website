@@ -47,7 +47,7 @@ const Splashscreen = () => {
                     animate="visible"
                 >
                     <motion.span
-                        className="text-black font-bold text-9xl pb-20 flex"
+                        className="text-black font-bold text-5xl xs:text-7xl sm:text-8xl lg:text-9xl pb-20 flex"
                         initial={{ y: 0, scale: 1 }}
                         animate={{
                             y: -500,
@@ -73,7 +73,7 @@ const Splashscreen = () => {
                     style={{ background: "transparent" }}
                 >
                     <motion.div
-                        className='absolute top-[10%] right-[5%]'
+                        className='absolute top-[20%] md:top-[10%] right-[5%]'
                         initial={{ x: 0, y: 0, scale: 1, rotate: 10 }}
                         animate={{
                             x: [0, 15, 0, -15, 0],
@@ -88,7 +88,7 @@ const Splashscreen = () => {
                     >
                         <motion.img
                             src={Cloud8}
-                            className='w-[600px]'
+                            className='w-[250px] xs:w-[300px] md:w-[350px] lg:w-[450px] xl:w-[600px]'
                             alt="Cloud 8"
                             initial={{ y: 0, scale: 1 }}
                             animate={{
@@ -109,7 +109,7 @@ const Splashscreen = () => {
                     style={{ background: "transparent" }}
                 >
                     <motion.div
-                        className='absolute bottom-[5%] left-[35%]'
+                        className='absolute bottom-[8%] xs:bottom-[5%] left-[35%]'
                         initial={{ x: 0, y: 0, scale: 1, rotate: 0 }}
                         animate={{
                             x: [0, 15, 0, -15, 0],
@@ -124,7 +124,7 @@ const Splashscreen = () => {
                     >
                         <motion.img
                             src={Cloud9}
-                            className='w-[600px]'
+                            className='w-[250px] xs:w-[300px] md:w-[350px] lg:w-[450px] xl:w-[600px]'
                             alt="Cloud 9"
                             initial={{ y: 0, scale: 1 }}
                             animate={{
@@ -145,7 +145,7 @@ const Splashscreen = () => {
                     style={{ background: "transparent" }}
                 >
                     <motion.div
-                        className='absolute bottom-[25%] left-[5%]'
+                        className='absolute bottom-[35%] md:bottom-[25%] left-[5%]'
                         initial={{ x: 0, y: 0, scale: 1, rotate: 0 }}
                         animate={{
                             x: [0, 15, 0, -15, 0],
@@ -160,7 +160,7 @@ const Splashscreen = () => {
                     >
                         <motion.img
                             src={Cloud3}
-                            className='w-[650px]'
+                            className='w-[300px] xs:w-[350px] md:w-[400px] lg:w-[500px] xl:w-[650px]'
                             alt="Cloud 3"
                             initial={{ y: 0, scale: 1 }}
                             animate={{
@@ -196,7 +196,7 @@ const Splashscreen = () => {
                     >
                         <motion.img
                             src={Cloud12}
-                            className='w-[600px]'
+                            className='w-[250px] xs:w-[300px] md:w-[350px] lg:w-[450px] xl:w-[600px]'
                             alt="Cloud 12"
                             initial={{ y: 0, scale: 1 }}
                             animate={{
@@ -232,7 +232,7 @@ const Splashscreen = () => {
                     >
                         <motion.img
                             src={Cloud1}
-                            className='w-[600px]'
+                            className='w-[250px] xs:w-[300px] md:w-[350px] lg:w-[450px] xl:w-[600px]'
                             alt="Cloud 1"
                             initial={{ y: 0, scale: 1 }}
                             animate={{

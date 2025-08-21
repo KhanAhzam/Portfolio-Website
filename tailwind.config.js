@@ -6,9 +6,7 @@ export default {
   ],
   theme: {
     extend: {
-
       // To use google fonts with Tailwind first import into index.css and then add here under extend
-
       fontFamily: {
         quicksand: ["Quicksand", "sans-serif"],
         nunito: ["Nunito", "sans-serif"],
@@ -28,7 +26,10 @@ export default {
         rubik: ["Rubik", "sans-serif"],
       },
       screens: {
-        xs: '450px'
+        "smaller": "400px",
+        xs: "450px",
+        "3xl": "1650px",
+        "large": "1150px",
       }
     },
   },

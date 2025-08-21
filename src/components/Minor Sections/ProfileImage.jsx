@@ -45,7 +45,7 @@ const ProfileImage = () => {
     return (
         <>
             <motion.img src={ProfilePhoto}
-                className='w-[450px] h-[450px] object-cover border-[3px] border-black'
+                className='w-[250px] h-[250px] xs:w-[300px] xs:h-[300px] md:w-[350px] md:h-[350px] 2xl:w-[450px] 2xl:h-[450px] object-cover border-[3px] border-black'
                 alt="Profile Photo"
                 animate={{
                     borderTopRightRadius: `${radii.TopRightX}% ${radii.TopRightY}%`,

@@ -4,9 +4,9 @@ import { motion } from "framer-motion"
 
 import { MapPin, MoveDown } from 'lucide-react';
 
-import Cloud1 from "../../assets/Clouds/1.jpg";
-import Cloud2 from "../../assets/Clouds/2.jpg";
-import Cloud3 from "../../assets/Clouds/3.jpg";
+import Cloud1 from "../../assets/Clouds/1.png";
+import Cloud2 from "../../assets/Clouds/2.png";
+import Cloud3 from "../../assets/Clouds/3.png";
 
 import ProfileImage from '../Minor Sections/ProfileImage'
 import Navbar from '../Minor Sections/Navbar'
@@ -16,7 +16,7 @@ const HeroSection = ({ HeroSectionRef_Passed, onScrollToAbout, onScrollToSkills,
 
     return (
         <>
-            <div ref={HeroSectionRef_Passed} className='min-h-screen flex flex-col justify-between mb-5'>
+            <div ref={HeroSectionRef_Passed} className='min-h-screen flex flex-col justify-start gap-0 md:gap-10 large:gap-0 large:justify-between mb-5'>
 
                 {/* Navbar */}
                 <motion.div
@@ -36,29 +36,37 @@ const HeroSection = ({ HeroSectionRef_Passed, onScrollToAbout, onScrollToSkills,
 
                 {/* Home-Content */}
                 <motion.div
-                    className="relative home container max-w-[1400px] my-5 mx-auto h-fit px-10 py-16 flex justify-between"
+                    className="relative home container max-w-[1000px] xl:max-w-[1100px] 2xl:max-w-[1300px] 3xl:max-w-[1400px] my-3 mx-auto px-10 large:py-16 flex flex-col large:flex-row items-center justify-between"
                     initial={{ x: 500, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ duration: 1.2, ease: "easeOut", delay: 0.3 }}
                 >
 
+                    {/* Image below 1050px (large) */}
+                    <div className="block large:hidden shrink-0 pb-10">
+                        <ProfileImage />
+                    </div>
+
                     {/* Text */}
-                    <div className="text flex flex-col w-[800px] justify-center">
+                    <div className="text flex flex-col w-full large:w-[800px] items-center large:items-baseline justify-center">
 
-                        <span className='font-extrabold text-2xl pl-5'>Hello, I am</span>
-                        <span className='font-bold text-9xl'>Ahzam Khan</span>
+                        <span className='font-bold leading-none large:leading-normal large:font-extrabold text-xl large:text-2xl large:pl-5'>Hello, I am</span>
+                        <span className='font-black smaller:font-extrabold sm:font-bold text-[40px] smaller:text-[54px] xs:text-6xl sm:text-8xl 2xl:text-9xl'>Ahzam Khan</span>
 
-                        <div className='pt-4 pl-8'>
-                            <span className='font-bold text-5xl'>Full Stack Dev</span>
-                            <span className='font-semibold text-4xl italic text-gray-800'> & </span>
-                            <span className='font-bold text-5xl'>DSA Learner</span>
+                        <div className='md:pl-8 text-center large:text-left'>
+                            <span className='font-bold text-[28px] sm:text-4xl 2xl:text-5xl'>Full Stack Dev</span>
+                            <span className='font-semibold text-2xl sm:text-3xl 2xl:text-4xl italic text-gray-800'> & </span>
+                            <span className='font-bold text-[28px] sm:text-4xl 2xl:text-5xl'>DSA Learner</span>
                         </div>
 
-                        <span className='font-medium text-[22px] pt-14 text-gray-800 pl-4'>Full Stack Developer creating standout web apps with clean code, sleek design, and smooth functionality.</span>
+                        <span className='font-semibold text-lg sm:text-[22px] text-center large:text-left pt-2 xs:pt-5 large:pt-14 text-gray-800 large:pl-4 mx-2 sm:mx-5 md:mx-10 large:mx-0'>
+                            Full Stack Developer creating standout web apps with clean code, sleek design, and smooth functionality.
+                        </span>
 
-                        <motion.div className='flex items-center pt-8 gap-2'>
-                            <MapPin size={35} />
-                            <span className=' font-bold text-2xl'>New Delhi, India</span>
+                        <motion.div className='flex items-center pt-4 xs:pt-8 gap-2'>
+                            <MapPin size={35} className='hidden xs:block'/>
+                            <MapPin size={28} className='block xs:hidden'/>
+                            <span className=' font-bold text-lg xs:text-2xl'>New Delhi, India</span>
                         </motion.div>
 
                         {/* Cloud 1 */}
@@ -145,14 +153,16 @@ const HeroSection = ({ HeroSectionRef_Passed, onScrollToAbout, onScrollToSkills,
 
                     </div>
 
-                    {/* Image */}
-                    <ProfileImage />
+                    {/* Image above 1050px (large) */}
+                    <div className="hidden large:block shrink-0">
+                        <ProfileImage />
+                    </div>
 
                 </motion.div>
 
                 {/* Home-Arrow */}
                 <motion.div
-                    className="arrow my-5 flex items-center justify-center"
+                    className="arrow my-5 large:flex items-center justify-center hidden"
                     initial={{ y: 100, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.7, ease: "easeOut", delay: 0.3 }}

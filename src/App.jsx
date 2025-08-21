@@ -17,8 +17,8 @@ function App() {
 
   return (
     <>
-      {loading ? <Splashscreen /> : <RouterProvider router={router} />}
-      {/* <RouterProvider router={router} /> */}
+      {/* {loading ? <Splashscreen /> : <RouterProvider router={router} />} */}
+      <RouterProvider router={router} />
     </>
   );
 }

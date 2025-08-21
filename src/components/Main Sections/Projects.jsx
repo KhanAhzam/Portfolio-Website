@@ -7,7 +7,7 @@ import Listly from "../../assets/Projects/Listly.png";
 import { GrGithub } from "react-icons/gr";
 import { FiExternalLink } from "react-icons/fi";
 
-import Cloud3 from "../../assets/Clouds/3.jpg";
+import Cloud3 from "../../assets/Clouds/3.png";
 import Cloud4 from "../../assets/Clouds/4.png";
 import Cloud8 from "../../assets/Clouds/8.png";
 import Cloud10 from "../../assets/Clouds/10.png";
