@@ -61,13 +61,13 @@ const Experience = ({ ExperienceRef_Passed, onScrollToExperience }) => {
         <>
 
             <div
-                className='relative container mx-auto min-h-screen w-[1400px] p-10'
+                className='relative container mx-auto min-h-screen max-w-[1400px] p-10'
                 ref={ExperienceRef_Passed}
             >
 
                 {/* Heading */}
                 <motion.div
-                    className="heading font-bold text-6xl"
+                    className="heading font-bold text-5xl mini_smaller:text-6xl"
                     initial={{ x: -200, opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }}
                     transition={{ duration: 1, ease: "easeOut" }}
@@ -78,11 +78,11 @@ const Experience = ({ ExperienceRef_Passed, onScrollToExperience }) => {
 
                 {/* Content */}
                 <motion.div
-                    className="my-10 px-16"
+                    className="my-10 px-0 md:px-16"
                     initial={{ x: 300, opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }}
                     transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
-                    viewport={{ once: true, amount: 0.3 }}
+                    viewport={{ once: true, amount: 0 }}
                 >
 
                     {Exp_list.map((item, index) => {
@@ -90,29 +90,29 @@ const Experience = ({ ExperienceRef_Passed, onScrollToExperience }) => {
 
                             {/* Experience Box */}
                             <div
-                                className={`w-full rounded-[30px] shadow-lg bg-[#f5f5f5] p-10 ${openStates[index] ? "h-fit" : "h-[200px]"}`}
+                                className={`w-full rounded-[30px] shadow-lg bg-[#f5f5f5] px-2 py-6 xs:p-10 ${openStates[index] ? "h-fit" : "h-[200px]"}`}
                             >
 
-                                {/* Upper-Visible Text */}
-                                <div className="text h-[120px] flex justify-between">
+                                {/* Upper-Visible Text for desktop devices */}
+                                <div className="text h-[120px] hidden md:flex justify-between">
 
                                     {/* Left Text */}
                                     <div className="left flex flex-col justify-evenly">
 
                                         {/* Company */}
-                                        <div className="title font-bold text-4xl">
+                                        <div className="title font-bold text-3xl lg:text-4xl">
                                             {item.company}
                                         </div>
 
                                         {/* Role */}
-                                        <div className="role font-semibold text-3xl">
+                                        <div className="role font-semibold text-xl lg:text-3xl">
                                             {item.role}
                                         </div>
 
                                     </div>
 
                                     {/* Right Text */}
-                                    <div className="right font-semibold text-[28px] pt-1 flex flex-col justify-evenly">
+                                    <div className="right font-semibold text-xl lg:text-[28px] pt-1 flex flex-col justify-evenly">
 
                                         {/* Duration */}
                                         <div className="duration">
@@ -128,9 +128,45 @@ const Experience = ({ ExperienceRef_Passed, onScrollToExperience }) => {
 
                                 </div>
 
-                                {/* Lower-Toggled Enabled Text */}
+                                {/* Upper-Visible Text for mobile devices */}
+                                <div className="text h-full flex flex-col md:hidden items-center text-center justify-evenly">
+
+                                    {/* Left Text */}
+                                    <div className="left flex flex-col justify-evenly">
+
+                                        {/* Company */}
+                                        <div className="title font-bold text-3xl lg:text-4xl">
+                                            {item.company}
+                                        </div>
+
+                                        {/* Role */}
+                                        <div className="role font-semibold mini_smaller:text-lg xs:text-xl lg:text-3xl">
+                                            {item.role}
+                                        </div>
+
+                                    </div>
+
+                                    {/* Right Text */}
+                                    <div className="right font-semibold mini_smaller:text-lg xs:text-xl lg:text-[28px] pt-1 flex flex-col justify-evenly">
+
+                                        {/* Duration */}
+                                        <div className="duration">
+                                            <span className="start">{item.duration_start}</span> - <span className="end">{item.duration_ends}</span>
+                                        </div>
+
+                                        {/* Location */}
+                                        <div className="location">
+                                            {item.location}
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+                                {/* Lower-Toggled Enabled Text for desktop devices */}
                                 {openStates[index] &&
-                                    <div className='w-full flex flex-col gap-8 items-center py-6 justify-between'>
+                                    <div className='w-full hidden md:flex flex-col gap-8 items-center py-6 justify-between'>
 
                                         {/* Details */}
                                         <ol className="details text-2xl font-semibold list-disc list-outside px-14">
@@ -180,6 +216,60 @@ const Experience = ({ ExperienceRef_Passed, onScrollToExperience }) => {
 
                                     </div>
                                 }
+
+                                {/* Lower-Toggled Enabled Text for mobile devices */}
+                                {openStates[index] &&
+                                    <div className='w-full flex md:hidden flex-col gap-8 items-center py-6 justify-between'>
+
+                                        {/* Details */}
+                                        <ol className="details text-base font-semibold list-disc list-outside px-8">
+                                            {item.details.map((item2) =>
+                                                <li key={index}>{item2}</li>
+                                            )}
+                                        </ol>
+
+                                        {/* Lower */}
+                                        <div className="lower flex flex-col w-full px-6 items-center gap-4">
+
+                                            {/* Skills */}
+                                            <div className="skills flex flex-wrap gap-1">
+                                                {item.skills.map((item2) =>
+                                                    <motion.span
+                                                        key={item2}
+                                                        className='font-semibold text-lg mt-1 bg-blue-500 w-fit px-3 py-1.5 rounded-[20px] cursor-pointer text-white'
+                                                        whileHover={{
+                                                            scale: 1.1,
+                                                            transition: { duration: 0.2 }
+                                                        }}
+                                                    >
+                                                        {item2}
+                                                    </motion.span>
+                                                )}
+                                            </div>
+
+                                            {/* Certification Button */}
+                                            <motion.a
+                                                className="certificate flex justify-center items-center w-[70px] h-[60px] rounded-[26px] bg-black text-white cursor-pointer"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                href={item.certi_link}
+                                                whileHover={{
+                                                    scale: 1.15,
+                                                    transition: { duration: 0.3 }
+                                                }}
+                                                whileTap={{
+                                                    scale: 0.8,
+                                                    transition: { duration: 0.1 }
+                                                }}
+                                            >
+                                                <PiCertificate fontSize={40} />
+                                            </motion.a>
+
+                                        </div>
+
+                                    </div>
+                                }
+
 
                                 {/* Cloud 7 */}
                                 {item.key_index === 1 &&

@@ -44,7 +44,7 @@ const Links = () => {
 
     return (
         <>
-            <ul className="hidden lg:flex flex-col items-start gap-2">
+            <ul className="hidden lg:flex flex-col items-start gap-2 z-50">
                 {iconData.map((item, index) => (
                     <li key={index} className=''>
 

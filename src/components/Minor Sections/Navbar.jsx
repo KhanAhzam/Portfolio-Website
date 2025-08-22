@@ -290,7 +290,6 @@ const Navbar = ({ onScrollToAbout_Passed, onScrollToSkills_Passed, onScrollToExp
                 </AnimatePresence>
 
             </div>
-
         </>
     )
 }

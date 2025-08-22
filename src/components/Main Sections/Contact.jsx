@@ -13,7 +13,7 @@ const Contact = ({ ContactRef_Passed }) => {
 
                 {/* Heading */}
                 <motion.div
-                    className="heading font-bold text-6xl"
+                    className="heading font-bold text-5xl mini_smaller:text-6xl"
                     initial={{ x: -200, opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }}
                     transition={{ duration: 1, ease: "easeOut" }}

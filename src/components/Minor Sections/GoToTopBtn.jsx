@@ -9,7 +9,7 @@ const GoToTopBtn = ({ onScrollToHeroSection }) => {
     return (
         <>
             <motion.div
-                className="bg-black fixed bottom-14 right-4 p-3 cursor-pointer text-white rounded-full hidden lg:flex items-center justify-center"
+                className="bg-black fixed bottom-14 right-4 p-2 lg:p-3 cursor-pointer text-white rounded-full flex items-center justify-center z-50"
                 onClick={onScrollToHeroSection}
                 initial={{ x: 200, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
@@ -22,7 +22,7 @@ const GoToTopBtn = ({ onScrollToHeroSection }) => {
                     }
                 }}
                 whileTap={{
-                    scale: 0.7,
+                    scale: 0.6,
                     transition: {
                         duration: 0.15,
                         ease: "easeOut"
@@ -30,7 +30,10 @@ const GoToTopBtn = ({ onScrollToHeroSection }) => {
                 }}
             >
                 {/* Arrow responsive spans */}
-                <span className="block xl:hidden">
+                <span className="block lg:hidden">
+                    <BsArrowUp fontSize={35} />
+                </span>
+                <span className="hidden lg:block xl:hidden">
                     <BsArrowUp fontSize={45} />
                 </span>
                 <span className="hidden xl:block">

@@ -105,7 +105,7 @@ const Skills = ({ SkillsRef_Passed }) => {
 
                 {/* Heading */}
                 <motion.div
-                    className="heading font-bold text-6xl"
+                    className="heading font-bold text-5xl mini_smaller:text-6xl"
                     initial={{ x: -200, opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }}
                     transition={{ duration: 1, ease: "easeOut" }}
@@ -128,27 +128,32 @@ const Skills = ({ SkillsRef_Passed }) => {
                         item.skill_name.toLowerCase() === "more skills" ? (
 
                             // Explore More Skills Options
-                            <div
+                            <motion.div
                                 className="w-[300px] smaller:w-[350px] sm:w-[450px] h-[220px] rounded-[30px] text-white bg-black cursor-pointer flex flex-col items-center justify-evenly p-5 origin-left"
+                                initial={{ y: 100, opacity: 0 }} // 👈 start below & invisible
+                                whileInView={{ y: 0, opacity: 1 }} // 👈 slide up + fade in
+                                transition={{ duration: 0.8, ease: "easeOut" }}
+                                viewport={{ once: true, amount: 0.2 }} // 👈 trigger when 20% visible
                             >
-
                                 {/* Text */}
-                                <div className="font-bold pb-4 sm:pb-8 text-3xl smaller:text-4xl text-center"
+                                <div
+                                    className="font-bold pb-4 sm:pb-8 text-3xl smaller:text-4xl text-center"
                                     key="text"
                                 >
                                     Explore My Other Skills!
                                 </div>
 
                                 {/* Button */}
-                                <motion.button className="w-[150px] h-[50px] bg-white rounded-3xl"
+                                <motion.button
+                                    className="w-[150px] h-[50px] bg-white rounded-3xl"
                                     key="btn"
                                     whileTap={{ scale: 0.7, transition: { duration: 0.2 } }}
                                     onClick={() => setShowMobileMoreSkills(true)}
                                 >
-                                    <span className='text-black font-bold text-4xl'>Go!</span>
+                                    <span className="text-black font-bold text-4xl">Go!</span>
                                 </motion.button>
+                            </motion.div>
 
-                            </div>
 
                         ) : (
 
@@ -248,7 +253,7 @@ const Skills = ({ SkillsRef_Passed }) => {
                 </motion.div>
 
                 {/* Content for desktop devices above md:768px */}
-                <motion.div className="hidden relative my-10 px-16 md:grid grid-cols-1 xl:grid-cols-2 4xl:grid-cols-4 text-center gap-y-[52px] justify-items-center 4xl:justify-items-start"
+                <motion.div className="hidden relative my-10 px-16 md:grid lg:grid-cols-2 2xl:grid-cols-3 4xl:grid-cols-4 text-center gap-y-[52px] justify-items-center 4xl:justify-items-start"
                     initial={{ x: 300, opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }}
                     transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}

@@ -26,11 +26,13 @@ export default {
         rubik: ["Rubik", "sans-serif"],
       },
       screens: {
+        "mini_smaller": "380px",
         "smaller": "400px",
         xs: "450px",
+        "large": "1150px",
+        "projects_1400": "1400px",
         "3xl": "1650px",
         "4xl": "1850px",
-        "large": "1150px",
       }
     },
   },

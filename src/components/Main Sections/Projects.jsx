@@ -51,13 +51,13 @@ const Projects = ({ ProjectsRef_Passed }) => {
         <>
 
             <div
-                className=' container mx-auto min-h-screen w-[1400px] p-10'
+                className=' container mx-auto min-h-screen max-w-[1400px] p-10'
                 ref={ProjectsRef_Passed}
             >
 
                 {/* Heading */}
                 <motion.div
-                    className="heading font-bold text-6xl"
+                    className="heading font-bold text-5xl mini_smaller:text-6xl"
                     initial={{ x: -200, opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }}
                     transition={{ duration: 1, ease: "easeOut" }}
@@ -67,42 +67,42 @@ const Projects = ({ ProjectsRef_Passed }) => {
                 </motion.div>
 
                 {/* Content */}
-                <div className="my-10 px-16">
+                <div className="my-10 md:px-16">
 
                     {Projects.map((item, Proj_index) =>
                         <div key={item.title} className='relative'>
 
                             {/* Card Content */}
                             <motion.div
-                                className='relative overflow-hidden bg-[#f5f5f5] h-[500px] w-full rounded-3xl pt-10 pb-5 pl-10 flex mt-20 shadow-lg'
+                                className='flex flex-col projects_1400:flex-row bg-[#f5f5f5] min-h-[600px] xs:min-h-[700px] lg:min-h-[750px] projects_1400:min-h-[500px] w-full rounded-3xl py-6 xs:pt-10 xs:pb-5 px-6 xs:px-10 mt-20 shadow-lg overflow-hidden'
                                 whileHover="hover"
                                 initial={{ x: 300, opacity: 0 }}
                                 whileInView={{ x: 0, opacity: 1 }}
                                 transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
-                                viewport={{ once: true, amount: 0.2 }}
+                                viewport={{ once: true, amount: 0 }}
                             >
 
-                                <div className="left w-[35%] flex flex-col justify-between">
+                                <div className="left w-full projects_1400:w-[35%] flex flex-col justify-between gap-5">
 
                                     {/* Upper */}
                                     <div className="upper flex flex-col gap-3">
 
                                         {/* Title */}
-                                        <div className="title text-5xl font-bold mb-5">
+                                        <div className="title text-4xl mini_smaller:text-[40px] xs:text-5xl font-bold xs:mb-2 sm:mb-5">
                                             {item.title}
                                         </div>
 
                                         {/* Description */}
-                                        <div className="desc text-2xl">
+                                        <div className="desc smaller:text-lg mini_smaller:text-xl xs:text-2xl">
                                             {item.desc}
                                         </div>
 
                                         {/* Stack used */}
-                                        <div className="stack flex flex-wrap gap-x-3 gap-y-2">
+                                        <div className="stack flex flex-wrap gap-2">
                                             {item.stack.map((item2) =>
                                                 <motion.div
                                                     key={item2}
-                                                    className='bg-blue-500 text-white px-4 py-1 rounded-[15px] font-semibold text-center text-xl cursor-pointer'
+                                                    className='bg-blue-500 text-white px-3 py-1 rounded-[16px] font-semibold text-center text-lg smaller:text-xl cursor-pointer'
                                                     whileHover={{
                                                         scale: 1.1,
                                                         transition: { duration: 0.2 }
@@ -126,7 +126,7 @@ const Projects = ({ ProjectsRef_Passed }) => {
                                             className="Github text-white rounded-[20px]"
                                         >
                                             <motion.button
-                                                className="flex justify-between px-4 items-center w-[130px] h-[50px] rounded-[22px] bg-black text-white cursor-pointer"
+                                                className="flex justify-between px-4 items-center gap-3 py-3 rounded-[22px] bg-black text-white cursor-pointer"
                                                 whileHover={{
                                                     scale: 1.15,
                                                     transition: { duration: 0.3 }
@@ -137,7 +137,7 @@ const Projects = ({ ProjectsRef_Passed }) => {
                                                 }}
                                             >
                                                 <GrGithub fontSize={30} />
-                                                <span className='text-xl font-semibold'>Github</span>
+                                                <span className='hidden smaller:block text-xl font-semibold'>Github</span>
                                             </motion.button>
                                         </a>
 
@@ -150,7 +150,7 @@ const Projects = ({ ProjectsRef_Passed }) => {
                                                 className="Github text-white rounded-[20px]"
                                             >
                                                 <motion.button
-                                                    className="flex justify-between px-4 items-center w-[110px] h-[50px] rounded-[22px] bg-black text-white cursor-pointer"
+                                                    className="flex justify-between px-4 items-center gap-3 py-3 rounded-[22px] bg-black text-white cursor-pointer"
                                                     whileHover={{
                                                         scale: 1.15,
                                                         transition: { duration: 0.3 }
@@ -161,7 +161,7 @@ const Projects = ({ ProjectsRef_Passed }) => {
                                                     }}
                                                 >
                                                     <FiExternalLink fontSize={30} />
-                                                    <span className='text-xl font-semibold'>Link</span>
+                                                    <span className='hidden smaller:block text-xl font-semibold'>Link</span>
                                                 </motion.button>
                                             </a>
                                         }
@@ -170,18 +170,44 @@ const Projects = ({ ProjectsRef_Passed }) => {
 
                                 </div>
 
-                                <div className="right w-[65%]">
-                                    <motion.img
-                                        src={Listly}
-                                        className='rounded-xl w-[1500px] left-[40%] top-[10%] absolute'
-                                        alt=""
-                                        variants={{
-                                            hover: { rotateZ: -5, transition: { duration: 0.4, ease: "easeOut" } }
-                                        }}
-                                    />
+                                <div className="relative right w-full projects_1400:w-[75%]">
+                                    <div className="flex w-[200%] sm:w-[140%] absolute smaller:top-2 smaller:left-5 xs:left-10 sm:left-20 xs:top-4 projects_1400:left-20 projects_1400:-bottom-20">
+                                        <motion.img
+                                            src={Listly}
+                                            className="h-auto w-full grow rounded-xl"
+                                            alt="Project Preview"
+                                            variants={{
+                                                rest: {
+                                                    rotateZ: 0,
+                                                    transition: { duration: 0.3, ease: "easeInOut" }
+                                                },
+                                                hover: {
+                                                    rotateZ: -5,
+                                                    transition: { duration: 0.3, ease: "easeOut" }
+                                                }
+                                            }}
+                                            whileHover="hover"
+                                            animate="rest" // 👈 ensures it returns using the `rest` transition
+                                            initial={{ y: 200, opacity: 0 }}
+                                            whileInView={{
+                                                y: 0,
+                                                opacity: 1,
+                                                transition: { duration: 0.7, ease: "easeOut", delay: 0.5 }
+                                            }}
+                                            viewport={{ once: true, amount: 0 }}
+                                        />
+
+                                    </div>
                                 </div>
 
                             </motion.div>
+
+
+
+
+
+
+
 
                             {/* Cloud 10 */}
                             {Proj_index === 0 &&
@@ -191,7 +217,7 @@ const Projects = ({ ProjectsRef_Passed }) => {
                                     initial={{ x: 400, opacity: 0 }}
                                     whileInView={{ x: 0, opacity: 1 }}
                                     transition={{ duration: 1.5, ease: "easeOut", delay: 0.8 }}
-                                    viewport={{ once: true, amount: 0.4 }}
+                                    viewport={{ once: true, amount: 0 }}
                                 >
                                     <motion.div
                                         className='absolute -top-[20%] -right-[16%]'
