@@ -194,8 +194,7 @@ const Skills = ({ SkillsRef_Passed }) => {
                     )}
 
                     {/* Cloud 5 */}
-                    <motion.div
-                        className="pointer-events-none absolute inset-0 -z-20"
+                    <motion.div className="pointer-events-none absolute inset-0 -z-20"
                         style={{ background: "transparent" }}
                         initial={{ x: 300, opacity: 0 }}
                         whileInView={{ x: 0, opacity: 1 }}
@@ -221,13 +220,12 @@ const Skills = ({ SkillsRef_Passed }) => {
                     </motion.div>
 
                     {/* Cloud 4 */}
-                    <motion.div
-                        className="pointer-events-none absolute inset-0 -z-20"
+                    <motion.div className="pointer-events-none absolute inset-0 -z-20"
                         style={{ background: "transparent" }}
                         initial={{ x: -300, opacity: 0 }}
                         whileInView={{ x: 0, opacity: 1 }}
                         transition={{ duration: 1.5, ease: "easeOut", delay: 0.5 }}
-                        viewport={{ once: true, amount: 0.1 }}
+                        viewport={{ once: true, amount: 0 }}
                     >
                         <motion.div
                             className='absolute -bottom-[2.5%] sm:-bottom-[3%] -left-[10%] sm:-left-[0%]'

@@ -370,7 +370,7 @@ const Experience = ({ ExperienceRef_Passed, onScrollToExperience }) => {
                                         <motion.div
                                             className="block md:hidden pointer-events-none absolute inset-0 -z-20"
                                             style={{ background: "transparent" }}
-                                            initial={{ x: -400, opacity: 0 }}
+                                            initial={{ x: -300, opacity: 0 }}
                                             whileInView={{ x: 0, opacity: 1 }}
                                             transition={{ duration: 1.5, ease: "easeOut", delay: 1.2 }}
                                             viewport={{ once: true, amount: 0.1 }}
