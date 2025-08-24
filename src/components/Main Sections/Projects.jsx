@@ -188,8 +188,8 @@ const Projects = ({ ProjectsRef_Passed }) => {
                                                 }
                                             }}
                                             whileHover="hover"
-                                            animate="rest" // 👈 ensures it returns using the `rest` transition
-                                            initial={{ y: 200, opacity: 0 }}
+                                            animate="rest"
+                                            initial={{ y: 100, opacity: 0 }}
                                             whileInView={{
                                                 y: 0,
                                                 opacity: 1,
