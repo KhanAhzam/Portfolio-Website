@@ -3,6 +3,7 @@ import React from 'react'
 import { motion } from "framer-motion"
 
 import Listly from "../../assets/Projects/Listly.png";
+import Portfolio from "../../assets/Projects/Portfolio.png";
 
 import { GrGithub } from "react-icons/gr";
 import { FiExternalLink } from "react-icons/fi";
@@ -16,35 +17,35 @@ const Projects = ({ ProjectsRef_Passed }) => {
 
     const Projects = [
         {
-            title: "Listly",
-            img: Listly,
-            desc: "Listly is a minimal to-do app that lets you add tasks, mark them done with a circular checkbox, strike them through, and hide or show completed items for a clutter-free view.",
-            stack: ["ReactJS", "TailwindCSS"],
-            github_link: "https://github.com/KhanAhzam/Listly-todo",
+            title: "Portfolio",
+            img: Portfolio,
+            desc: "A personal portfolio website designed to showcase skills, projects and experience in a sleek, clean and responsive layout.",
+            stack: ["ReactJS", "JavaScript", "TailwindCSS", "Framer-Motion"],
+            github_link: "https://github.com/KhanAhzam/Portfolio-Website",
             is_hosted: false,
             hosting_link: null,
             key_index: 1
         },
         {
-            title: "WeatherNow",
-            img: Listly, // replace with your image import if available
-            desc: "WeatherNow is a live weather dashboard that shows current conditions and forecasts for any location, powered by real-time API data and a responsive design.",
-            stack: ["ReactJS", "TailwindCSS", "OpenWeather API"],
-            github_link: "https://github.com/your-username/weather-now",
-            is_hosted: true,
-            hosting_link: "https://weathernow-demo.vercel.app",
-            key_index: 2
-        },
-        {
-            title: "BudgetBuddy",
-            img: Listly, // replace with your image import if available
-            desc: "BudgetBuddy helps you track expenses, categorize spending, and visualize your budget trends with intuitive charts and reports.",
-            stack: ["ReactJS", "Chart.js", "TailwindCSS"],
-            github_link: "https://github.com/your-username/budget-buddy",
+            title: "Listly",
+            img: Listly,
+            desc: "Listly is a minimal to-do app that lets you add tasks, mark them done with a circular checkbox, strike them through, and hide or show completed items for a clutter-free view.",
+            stack: ["ReactJS", "JavaScript", "TailwindCSS"],
+            github_link: "https://github.com/KhanAhzam/Listly-todo",
             is_hosted: false,
             hosting_link: null,
-            key_index: 3
-        }
+            key_index: 2
+        },
+        // {
+        //     title: "BudgetBuddy",
+        //     img: Listly, // replace with your image import if available
+        //     desc: "BudgetBuddy helps you track expenses, categorize spending, and visualize your budget trends with intuitive charts and reports.",
+        //     stack: ["ReactJS", "Chart.js", "TailwindCSS"],
+        //     github_link: "https://github.com/your-username/budget-buddy",
+        //     is_hosted: false,
+        //     hosting_link: null,
+        //     key_index: 3
+        // }
     ]
 
     return (
@@ -70,16 +71,16 @@ const Projects = ({ ProjectsRef_Passed }) => {
                 <div className="my-10 md:px-16">
 
                     {Projects.map((item, Proj_index) =>
-                        <div key={item.title} className='relative'>
+                        <div key={item.title} className='map_div relative'>
 
                             {/* Card Content */}
                             <motion.div
-                                className='flex flex-col projects_1400:flex-row bg-[#f5f5f5] min-h-[600px] xs:min-h-[700px] lg:min-h-[750px] projects_1400:min-h-[500px] w-full rounded-3xl py-6 xs:pt-10 xs:pb-5 px-6 xs:px-10 mt-20 shadow-lg overflow-hidden'
+                                className='flex flex-col projects_1400:flex-row bg-[#f5f5f5] min-h-[600px] mini_smaller:min-h-[630px] xs:min-h-[700px] lg:min-h-[750px] projects_1400:min-h-[500px] w-full rounded-3xl py-6 xs:pt-10 xs:pb-5 px-6 xs:px-10 mt-20 shadow-lg overflow-hidden'
                                 whileHover="hover"
                                 initial={{ x: 300, opacity: 0 }}
                                 whileInView={{ x: 0, opacity: 1 }}
                                 transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
-                                viewport={{ once: true, amount: 0 }}
+                                viewport={{ once: true, amount: 0.1 }}
                             >
 
                                 <div className="left w-full projects_1400:w-[35%] flex flex-col justify-between gap-5">
@@ -173,7 +174,7 @@ const Projects = ({ ProjectsRef_Passed }) => {
                                 <div className="relative right w-full projects_1400:w-[75%]">
                                     <div className="flex w-[200%] sm:w-[140%] absolute smaller:top-2 smaller:left-5 xs:left-10 sm:left-20 xs:top-4 projects_1400:left-20 projects_1400:-bottom-20">
                                         <motion.img
-                                            src={Listly}
+                                            src={item.img}
                                             className="h-auto w-full grow rounded-xl"
                                             alt="Project Preview"
                                             variants={{
@@ -192,7 +193,7 @@ const Projects = ({ ProjectsRef_Passed }) => {
                                             whileInView={{
                                                 y: 0,
                                                 opacity: 1,
-                                                transition: { duration: 0.7, ease: "easeOut", delay: 0.5 }
+                                                transition: { duration: 1, ease: "easeOut", delay: 0.2 }
                                             }}
                                             viewport={{ once: true, amount: 0 }}
                                         />
@@ -202,17 +203,9 @@ const Projects = ({ ProjectsRef_Passed }) => {
 
                             </motion.div>
 
-
-
-
-
-
-
-
-                            {/* Cloud 10 */}
+                            {/* Cloud 10 for bigger screens above xs, 450px */}
                             {Proj_index === 0 &&
-                                <motion.div
-                                    className="pointer-events-none absolute inset-0 -z-20"
+                                <motion.div className="hidden xs:block pointer-events-none absolute inset-0 -z-20"
                                     style={{ background: "transparent" }}
                                     initial={{ x: 400, opacity: 0 }}
                                     whileInView={{ x: 0, opacity: 1 }}
@@ -238,39 +231,9 @@ const Projects = ({ ProjectsRef_Passed }) => {
                                 </motion.div>
                             }
 
-                            {/* Cloud 3 */}
-                            {Proj_index === 2 &&
-                                <motion.div
-                                    className="pointer-events-none absolute inset-0 -z-20"
-                                    style={{ background: "transparent" }}
-                                    initial={{ x: 200, opacity: 0 }}
-                                    whileInView={{ x: 0, opacity: 1 }}
-                                    transition={{ duration: 1.5, ease: "easeOut", delay: 0.5 }}
-                                    viewport={{ once: true, amount: 0.4 }}
-                                >
-                                    <motion.div
-                                        className='absolute -top-[20%] -right-[25%]'
-                                        initial={{ x: 0, y: 0, scale: 1, rotate: 15 }}
-                                        animate={{
-                                            x: [0, 15, 0, -15, 0],
-                                            y: [0, -10, 0, 10, 0],
-                                            scale: [1, 1.15, 1]
-                                        }}
-                                        transition={{
-                                            x: { duration: 30, repeat: Infinity, ease: "easeInOut" },
-                                            y: { duration: 20, repeat: Infinity, ease: "easeInOut" },
-                                            scale: { duration: 30, repeat: Infinity, ease: "easeInOut" }
-                                        }}
-                                    >
-                                        <img src={Cloud3} className='w-[450px]' alt="Cloud 3" />
-                                    </motion.div>
-                                </motion.div>
-                            }
-
-                            {/* Cloud 8 */}
+                            {/* Cloud 8 for bigger screens above xs, 450px */}
                             {Proj_index === 1 &&
-                                <motion.div
-                                    className="pointer-events-none absolute inset-0 -z-20"
+                                <motion.div className="hidden xs:block pointer-events-none absolute inset-0 -z-20"
                                     style={{ background: "transparent" }}
                                     initial={{ x: -200, opacity: 0 }}
                                     whileInView={{ x: 0, opacity: 1 }}
@@ -296,10 +259,37 @@ const Projects = ({ ProjectsRef_Passed }) => {
                                 </motion.div>
                             }
 
-                            {/* Cloud 4 */}
+{/* Need to Work On */}     {/* Cloud 3 */}
                             {Proj_index === 2 &&
-                                <motion.div
-                                    className="pointer-events-none absolute inset-0 -z-20"
+                                <motion.div className="pointer-events-none absolute inset-0 -z-20"
+                                    style={{ background: "transparent" }}
+                                    initial={{ x: 200, opacity: 0 }}
+                                    whileInView={{ x: 0, opacity: 1 }}
+                                    transition={{ duration: 1.5, ease: "easeOut", delay: 0.5 }}
+                                    viewport={{ once: true, amount: 0.4 }}
+                                >
+                                    <motion.div
+                                        className='absolute -top-[20%] -right-[25%]'
+                                        initial={{ x: 0, y: 0, scale: 1, rotate: 15 }}
+                                        animate={{
+                                            x: [0, 15, 0, -15, 0],
+                                            y: [0, -10, 0, 10, 0],
+                                            scale: [1, 1.15, 1]
+                                        }}
+                                        transition={{
+                                            x: { duration: 30, repeat: Infinity, ease: "easeInOut" },
+                                            y: { duration: 20, repeat: Infinity, ease: "easeInOut" },
+                                            scale: { duration: 30, repeat: Infinity, ease: "easeInOut" }
+                                        }}
+                                    >
+                                        <img src={Cloud3} className='w-[450px]' alt="Cloud 3" />
+                                    </motion.div>
+                                </motion.div>
+                            }
+
+{/* Need to Work On */}     {/* Cloud 4 */}
+                            {Proj_index === 2 &&
+                                <motion.div className="pointer-events-none absolute inset-0 -z-20"
                                     style={{ background: "transparent" }}
                                     initial={{ x: -200, opacity: 0 }}
                                     whileInView={{ x: 0, opacity: 1 }}
@@ -321,6 +311,90 @@ const Projects = ({ ProjectsRef_Passed }) => {
                                         }}
                                     >
                                         <img src={Cloud4} className='w-[350px]' alt="Cloud 4" />
+                                    </motion.div>
+                                </motion.div>
+                            }
+
+                            {/* Top Cloud 10 for smaller screens below xs, 450px */}
+                            {Proj_index === 0 &&
+                                <motion.div className="block xs:hidden pointer-events-none absolute inset-0 -z-20"
+                                    style={{ background: "transparent" }}
+                                    initial={{ x: 300, opacity: 0 }}
+                                    whileInView={{ x: 0, opacity: 1 }}
+                                    transition={{ duration: 1.5, ease: "easeOut", delay: 0.8 }}
+                                    viewport={{ once: true, amount: 0.05 }}
+                                >
+                                    <motion.div
+                                        className='absolute -top-[20%] -right-[16%]'
+                                        initial={{ x: 0, y: 0, scale: 1, rotate: 15 }}
+                                        animate={{
+                                            x: [0, 15, 0, -15, 0],
+                                            y: [0, -10, 0, 10, 0],
+                                            scale: [1, 1.15, 1]
+                                        }}
+                                        transition={{
+                                            x: { duration: 30, repeat: Infinity, ease: "easeInOut" },
+                                            y: { duration: 20, repeat: Infinity, ease: "easeInOut" },
+                                            scale: { duration: 30, repeat: Infinity, ease: "easeInOut" }
+                                        }}
+                                    >
+                                        <img src={Cloud10} className='w-[250px]' alt="Cloud 10" />
+                                    </motion.div>
+                                </motion.div>
+                            }
+
+                            {/* Middle Cloud 8 for smaller screens below xs, 450px */}
+                            {Proj_index === 1 &&
+                                <motion.div className="block xs:hidden pointer-events-none absolute inset-0 -z-20"
+                                    style={{ background: "transparent" }}
+                                    initial={{ x: -300, opacity: 0 }}
+                                    whileInView={{ x: 0, opacity: 1 }}
+                                    transition={{ duration: 1.5, ease: "easeOut", delay: 0.5 }}
+                                    viewport={{ once: true, amount: 0.05 }}
+                                >
+                                    <motion.div
+                                        className='absolute -top-[15%] -left-[20%]'
+                                        initial={{ x: 0, y: 0, scale: 1, rotate: -5 }}
+                                        animate={{
+                                            x: [0, 15, 0, -15, 0],
+                                            y: [0, -10, 0, 10, 0],
+                                            scale: [1, 1.15, 1]
+                                        }}
+                                        transition={{
+                                            x: { duration: 30, repeat: Infinity, ease: "easeInOut" },
+                                            y: { duration: 20, repeat: Infinity, ease: "easeInOut" },
+                                            scale: { duration: 30, repeat: Infinity, ease: "easeInOut" }
+                                        }}
+                                    >
+                                        <img src={Cloud8} className='w-[300px]' alt="Cloud 8" />
+                                    </motion.div>
+                                </motion.div>
+                            }
+
+                            {/* Bottom Cloud 4 Inverted for smaller screens below xs, 450px */}
+                            {Proj_index === 1 &&
+                                <motion.div className="pointer-events-none absolute inset-0 -z-20"
+                                    style={{ background: "transparent" }}
+                                    initial={{ x: -300, opacity: 0 }}
+                                    whileInView={{ x: 0, opacity: 1 }}
+                                    transition={{ duration: 1.5, ease: "easeOut", delay: 1 }}
+                                    viewport={{ once: true, amount: 0.1 }}
+                                >
+                                    <motion.div
+                                        className='absolute -bottom-[10%] -right-[17%]'
+                                        initial={{ x: 0, y: 0, scale: 1, rotate: -5, scaleX: 1, opacity: "90%" }}
+                                        animate={{
+                                            x: [0, 15, 0, -15, 0],
+                                            y: [0, -10, 0, 10, 0],
+                                            scale: [1, 1.15, 1]
+                                        }}
+                                        transition={{
+                                            x: { duration: 30, repeat: Infinity, ease: "easeInOut" },
+                                            y: { duration: 20, repeat: Infinity, ease: "easeInOut" },
+                                            scale: { duration: 30, repeat: Infinity, ease: "easeInOut" }
+                                        }}
+                                    >
+                                        <img src={Cloud4} className='w-[250px]' alt="Cloud 4" />
                                     </motion.div>
                                 </motion.div>
                             }

@@ -130,10 +130,10 @@ const Skills = ({ SkillsRef_Passed }) => {
                             // Explore More Skills Options
                             <motion.div
                                 className="w-[300px] smaller:w-[350px] sm:w-[450px] h-[220px] rounded-[30px] text-white bg-black cursor-pointer flex flex-col items-center justify-evenly p-5 origin-left"
-                                initial={{ y: 100, opacity: 0 }} // 👈 start below & invisible
-                                whileInView={{ y: 0, opacity: 1 }} // 👈 slide up + fade in
+                                initial={{ y: 100, opacity: 0 }}
+                                whileInView={{ y: 0, opacity: 1 }}
                                 transition={{ duration: 0.8, ease: "easeOut" }}
-                                viewport={{ once: true, amount: 0.2 }} // 👈 trigger when 20% visible
+                                viewport={{ once: true, amount: 0.2 }}
                             >
                                 {/* Text */}
                                 <div
@@ -161,12 +161,10 @@ const Skills = ({ SkillsRef_Passed }) => {
                             <div className="relative w-[250px] h-[220px] lg:h-[180px]">
                                 <motion.div
                                     className="absolute top-0 left-0 w-full h-full rounded-[30px] text-white bg-black cursor-pointer flex flex-col items-center p-3"
-                                    animate={{
-                                        height: isMobile ? 220 : IsIndex === index ? 220 : 180,
-                                    }}
-                                    transition={{ duration: 0.4, ease: "easeOut" }}
-                                    onHoverStart={() => !isMobile && setIsIndex(index)}
-                                    onHoverEnd={() => !isMobile && setIsIndex(null)}
+                                    initial={{ y: 100, opacity: 0 }}
+                                    whileInView={{ y: 0, opacity: 1 }}
+                                    transition={{ duration: 0.8, ease: "easeOut" }}
+                                    viewport={{ once: true, amount: 0.2 }}
                                 >
                                     {/* Icon */}
                                     <div className="pt-10">{item.skill_icon}</div>
