@@ -21,7 +21,7 @@ const Experience = ({ ExperienceRef_Passed, onScrollToExperience }) => {
             details: [
                 "Developed a full-featured website from scratch using React.js and Tailwind CSS, with a focus on clean, maintainable, and scalable code.",
                 "Designed user interfaces and user flows using Figma, ensuring visual consistency and ease of navigation.",
-                "Created 10+ dynamic pages, including Landing Page, Announcement Page, Sign In, Sign Up, and other key user interaction screens.",
+                "Created 10+ dynamic pages, including Landing Page, Announcement Page, Sign In, Sign Up, Dashboards and other key user interaction screens.",
                 "Developed backend functionality for a data capture page to store user emails in a cloud database using various backend technologies ensuring secure and reliable data handling.",
                 "Collaborated with a team of developers using version control system GitHub to manage code, conduct reviews, and maintain smooth project workflows."
             ],
