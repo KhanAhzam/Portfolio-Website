@@ -394,7 +394,7 @@ const Projects = ({ ProjectsRef_Passed }) => {
                                             scale: { duration: 30, repeat: Infinity, ease: "easeInOut" }
                                         }}
                                     >
-                                        <img src={Cloud4} className='w-[250px]' alt="Cloud 4" />
+                                        <img src={Cloud4} className='w-[300px] sm:w-[350px]' alt="Cloud 4" />
                                     </motion.div>
                                 </motion.div>
                             }
