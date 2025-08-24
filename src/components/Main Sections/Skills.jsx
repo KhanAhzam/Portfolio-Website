@@ -115,7 +115,7 @@ const Skills = ({ SkillsRef_Passed }) => {
                 </motion.div>
 
                 {/* Content for mobile devices below md:768px */}
-                <motion.div className="md:hidden relative my-10 px-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center gap-y-[26px]"
+                <motion.div className="md:hidden relative my-10 px-16 grid grid-cols-1 justify-items-center gap-y-[26px]"
                     initial={{ x: 300, opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }}
                     transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
@@ -199,13 +199,13 @@ const Skills = ({ SkillsRef_Passed }) => {
                     <motion.div
                         className="pointer-events-none absolute inset-0 -z-20"
                         style={{ background: "transparent" }}
-                        initial={{ x: 500, opacity: 0 }}
+                        initial={{ x: 300, opacity: 0 }}
                         whileInView={{ x: 0, opacity: 1 }}
                         transition={{ duration: 1.5, ease: "easeOut", delay: 0.5 }}
-                        viewport={{ once: true, amount: 0.4 }}
+                        viewport={{ once: true, amount: 0 }}
                     >
                         <motion.div
-                            className='absolute -top-[15%] -right-[10%]'
+                            className='absolute -top-[4%] -right-[5%]'
                             initial={{ x: 0, y: 0, scale: 1, rotate: 13 }}
                             animate={{
                                 x: [0, 5, 0, -5, 0],
@@ -218,7 +218,7 @@ const Skills = ({ SkillsRef_Passed }) => {
                                 scale: { duration: 30, repeat: Infinity, ease: "easeInOut" }
                             }}
                         >
-                            <img src={Cloud5} className='w-[350px]' alt="Cloud 5" />
+                            <img src={Cloud5} className='w-[250px] xs:w-[300px] sm:w-[350px]' alt="Cloud 5" />
                         </motion.div>
                     </motion.div>
 
@@ -226,13 +226,13 @@ const Skills = ({ SkillsRef_Passed }) => {
                     <motion.div
                         className="pointer-events-none absolute inset-0 -z-20"
                         style={{ background: "transparent" }}
-                        initial={{ x: -500, opacity: 0 }}
+                        initial={{ x: -300, opacity: 0 }}
                         whileInView={{ x: 0, opacity: 1 }}
                         transition={{ duration: 1.5, ease: "easeOut", delay: 0.5 }}
-                        viewport={{ once: true, amount: 0.4 }}
+                        viewport={{ once: true, amount: 0.1 }}
                     >
                         <motion.div
-                            className='absolute -bottom-[8%] -left-[10%]'
+                            className='absolute -bottom-[2.5%] sm:-bottom-[3%] -left-[10%] sm:-left-[0%]'
                             initial={{ x: 0, y: 0, scale: 1, rotate: -15, scaleX: -1 }}
                             animate={{
                                 x: [0, 5, 0, -5, 0],
@@ -245,10 +245,9 @@ const Skills = ({ SkillsRef_Passed }) => {
                                 scale: { duration: 30, repeat: Infinity, ease: "easeInOut" }
                             }}
                         >
-                            <img src={Cloud4} className='w-[350px]' alt="Cloud 4" />
+                            <img src={Cloud4} className='w-[250px] xs:w-[300px] sm:w-[350px]' alt="Cloud 4" />
                         </motion.div>
                     </motion.div>
-
 
                 </motion.div>
 
@@ -382,10 +381,10 @@ const Skills = ({ SkillsRef_Passed }) => {
                         initial={{ x: 500, opacity: 0 }}
                         whileInView={{ x: 0, opacity: 1 }}
                         transition={{ duration: 1.5, ease: "easeOut", delay: 0.5 }}
-                        viewport={{ once: true, amount: 0.4 }}
+                        viewport={{ once: true, amount: 0.1 }}
                     >
                         <motion.div
-                            className='absolute -top-[15%] -right-[10%]'
+                            className='absolute -top-[5%] lg:-top-[10%] 4xl:-top-[15%] -right-[0%] lg:-right-[5%] 2xl:-right-[10%]'
                             initial={{ x: 0, y: 0, scale: 1, rotate: 13 }}
                             animate={{
                                 x: [0, 5, 0, -5, 0],
@@ -409,10 +408,10 @@ const Skills = ({ SkillsRef_Passed }) => {
                         initial={{ x: -500, opacity: 0 }}
                         whileInView={{ x: 0, opacity: 1 }}
                         transition={{ duration: 1.5, ease: "easeOut", delay: 0.5 }}
-                        viewport={{ once: true, amount: 0.4 }}
+                        viewport={{ once: true, amount: 0.1 }}
                     >
                         <motion.div
-                            className='absolute -bottom-[8%] -left-[10%]'
+                            className='absolute -bottom-[3%] lg:-bottom-[5%] 4xl:-bottom-[8%] -left-[0%] lg:-left-[5%] 2xl:-left-[10%]'
                             initial={{ x: 0, y: 0, scale: 1, rotate: -15, scaleX: -1 }}
                             animate={{
                                 x: [0, 5, 0, -5, 0],
@@ -428,7 +427,6 @@ const Skills = ({ SkillsRef_Passed }) => {
                             <img src={Cloud4} className='w-[350px]' alt="Cloud 4" />
                         </motion.div>
                     </motion.div>
-
 
                 </motion.div>
 

@@ -16,11 +16,11 @@ const HeroSection = ({ HeroSectionRef_Passed, onScrollToAbout, onScrollToSkills,
 
     return (
         <>
-            <div ref={HeroSectionRef_Passed} className='min-h-screen flex flex-col justify-start gap-0 md:gap-10 large:gap-0 large:justify-between mb-5 overflow-x-hidden'>
+            <div ref={HeroSectionRef_Passed} className='relative min-h-screen flex flex-col justify-start gap-0 md:gap-10 large:gap-0 large:justify-between mb-5 overflow-hidden'>
 
                 {/* Navbar */}
                 <motion.div
-                    className="navbar mb-5"
+                    className="navbar mb-5 relative"
                     initial={{ y: -100, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 1, ease: "easeOut" }}
@@ -32,6 +32,35 @@ const HeroSection = ({ HeroSectionRef_Passed, onScrollToAbout, onScrollToSkills,
                         onScrollToProjects_Passed={onScrollToProjects}
                         onScrollToContact_Passed={onScrollToContact}
                     />
+
+                    {/* <motion.div className="pointer-events-none absolute inset-0 -z-20"
+                        style={{ background: "transparent" }}
+                        initial={{ x: -600, opacity: 0 }}
+                        whileInView={{ x: 0, opacity: 1 }}
+                        transition={{ duration: 1.5, ease: "easeOut", delay: 0.8 }}
+                        viewport={{ once: true, amount: 0 }}
+                    >
+                        <motion.div
+                            className='top-[10%] -left-[5%]'
+                            initial={{ x: 0, y: 0, scale: 1 }}
+                            animate={{
+                                x: [0, 50, 0, -50, 0],
+                                y: [0, -10, 0, 10, 0],
+                                scale: [1, 1.15, 1]
+                            }}
+                            transition={{
+                                x: { duration: 60, repeat: Infinity, ease: "easeInOut" },
+                                y: { duration: 15, repeat: Infinity, ease: "easeInOut" },
+                                scale: { duration: 30, repeat: Infinity, ease: "easeInOut" }
+                            }}
+                        >
+                            <img src={Cloud1} className='w-[550px]' alt="Cloud 1" />
+                        </motion.div>
+
+                    </motion.div> */}
+
+
+
                 </motion.div>
 
                 {/* Home-Content */}
@@ -69,6 +98,85 @@ const HeroSection = ({ HeroSectionRef_Passed, onScrollToAbout, onScrollToSkills,
                             <span className='font-extrabold sm:font-bold text-[22px] xs:text-2xl'>New Delhi, India</span>
                         </motion.div>
 
+                        {/* Cloud 1 */}
+                        <motion.div className="hidden large:block pointer-events-none absolute inset-0 -z-20"
+                            style={{ background: "transparent" }}
+                            initial={{ x: -600, opacity: 0 }}
+                            whileInView={{ x: 0, opacity: 1 }}
+                            transition={{ duration: 1.5, ease: "easeOut", delay: 0.8 }}
+                            viewport={{ once: true, amount: 0.4 }}
+                        >
+                            <motion.div
+                                className='absolute -top-[10%] -left-[15%]'
+                                initial={{ x: 0, y: 0, scale: 1 }}
+                                animate={{
+                                    x: [0, 50, 0, -50, 0],
+                                    y: [0, -10, 0, 10, 0],
+                                    scale: [1, 1.15, 1]
+                                }}
+                                transition={{
+                                    x: { duration: 60, repeat: Infinity, ease: "easeInOut" },
+                                    y: { duration: 15, repeat: Infinity, ease: "easeInOut" },
+                                    scale: { duration: 30, repeat: Infinity, ease: "easeInOut" }
+                                }}
+                            >
+                                <img src={Cloud1} className='w-[550px]' alt="Cloud 1" />
+                            </motion.div>
+
+                        </motion.div>
+
+                        {/* Cloud 2 */}
+                        <motion.div className="hidden large:block pointer-events-none absolute inset-0 -z-20"
+                            style={{ background: "transparent" }}
+                            initial={{ x: 500, opacity: 0 }}
+                            whileInView={{ x: 0, opacity: 1 }}
+                            transition={{ duration: 1.5, ease: "easeOut", delay: 0.8 }}
+                            viewport={{ once: true, amount: 0.4 }}
+                        >
+                            <motion.div
+                                className='absolute -top-[5%] -right-[15%]'
+                                initial={{ x: 0, y: 0, scale: 1, rotate: 5 }}
+                                animate={{
+                                    x: [0, 5, 0, -5, 0],
+                                    y: [0, -10, 0, 10, 0],
+                                    scale: [1, 1.15, 1]
+                                }}
+                                transition={{
+                                    x: { duration: 60, repeat: Infinity, ease: "easeInOut" },
+                                    y: { duration: 20, repeat: Infinity, ease: "easeInOut" },
+                                    scale: { duration: 30, repeat: Infinity, ease: "easeInOut" }
+                                }}
+                            >
+                                <img src={Cloud2} className='w-[500px]' alt="Cloud 2" />
+                            </motion.div>
+                        </motion.div>
+
+                        {/* Cloud 3 */}
+                        <motion.div className="hidden large:block pointer-events-none absolute inset-0 -z-20"
+                            style={{ background: "transparent" }}
+                            initial={{ x: 500, opacity: 0 }}
+                            whileInView={{ x: 0, opacity: 1 }}
+                            transition={{ duration: 1.5, ease: "easeOut", delay: 0.8 }}
+                            viewport={{ once: true, amount: 0.4 }}
+                        >
+                            <motion.div
+                                className='absolute bottom-0 right-[14%]'
+                                initial={{ x: 0, y: 0, scale: 1, rotate: 3 }}
+                                animate={{
+                                    x: [0, 10, 0, -10, 0],
+                                    y: [0, -10, 0, 10, 0],
+                                    scale: [1, 1.15, 1]
+                                }}
+                                transition={{
+                                    x: { duration: 60, repeat: Infinity, ease: "easeInOut" },
+                                    y: { duration: 15, repeat: Infinity, ease: "easeInOut" },
+                                    scale: { duration: 30, repeat: Infinity, ease: "easeInOut" }
+                                }}
+                            >
+                                <img src={Cloud3} className='w-[550px]' alt="Cloud 3" />
+                            </motion.div>
+                        </motion.div>
+
                     </div>
 
                     {/* Image above 1150px (large) */}
@@ -76,65 +184,96 @@ const HeroSection = ({ HeroSectionRef_Passed, onScrollToAbout, onScrollToSkills,
                         <ProfileImage />
                     </div>
 
-                    {/* Shared Cloud Wrapper */}
-                    <div className="pointer-events-none absolute inset-0 -z-20 overflow-x-hidden large:overflow-visible">
 
-                        {/* Cloud 1 */}
-                        <motion.div
-                        className="absolute top-[5%] -left-[5%] sm:left-[0%] large:-top-[10%] large:-left-[15%]"
+
+
+
+
+
+
+
+
+
+
+                </motion.div>
+
+                {/* Cloud 1 for mobile devices */}
+                <motion.div className="block large:hidden pointer-events-none absolute inset-0 -z-20"
+                    style={{ background: "transparent" }}
+                    initial={{ x: -300, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 1.5, ease: "easeOut", delay: 1 }}
+                    viewport={{ once: true, amount: 0 }}
+                >
+                    <motion.div
+                        className='absolute top-[5%] -left-[5%] sm:left-[0%] large:-top-[10%] large:-left-[15%]'
                         initial={{ x: 0, y: 0, scale: 1 }}
                         animate={{
                             x: [0, 50, 0, -50, 0],
                             y: [0, -10, 0, 10, 0],
-                            scale: [1, 1.15, 1],
+                            scale: [1, 1.15, 1]
                         }}
                         transition={{
                             x: { duration: 60, repeat: Infinity, ease: "easeInOut" },
                             y: { duration: 15, repeat: Infinity, ease: "easeInOut" },
-                            scale: { duration: 30, repeat: Infinity, ease: "easeInOut" },
+                            scale: { duration: 30, repeat: Infinity, ease: "easeInOut" }
                         }}
-                        >
+                    >
                         <img src={Cloud1} className="w-[300px] sm:w-[350px] md:w-[450px] lg:w-[550px]" alt="Cloud 1" />
-                        </motion.div>
+                    </motion.div>
 
-                        {/* Cloud 2 */}
-                        <motion.div
-                        className="absolute top-[48%] md:top-[50%] large:-top-[5%] -right-[5%] xs:-right-[10%] sm:right-[0%] md:-right-[5%] lg:right-[0%] large:-right-[15%]"
+                </motion.div>
+
+                {/* Cloud 2 for mobile devices */}
+                <motion.div className="block large:hidden pointer-events-none absolute inset-0 -z-20"
+                    style={{ background: "transparent" }}
+                    initial={{ x: 300, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 1.5, ease: "easeOut", delay: 1 }}
+                    viewport={{ once: true, amount: 0 }}
+                >
+                    <motion.div
+                        className='absolute top-[44%] md:top-[50%] large:-top-[5%] -right-[10%] xs:-right-[10%] sm:right-[0%] md:-right-[5%] lg:right-[0%] large:-right-[15%]'
                         initial={{ x: 0, y: 0, scale: 1, rotate: 5 }}
                         animate={{
                             x: [0, 5, 0, -5, 0],
                             y: [0, -10, 0, 10, 0],
-                            scale: [1, 1.15, 1],
+                            scale: [1, 1.15, 1]
                         }}
                         transition={{
                             x: { duration: 60, repeat: Infinity, ease: "easeInOut" },
                             y: { duration: 20, repeat: Infinity, ease: "easeInOut" },
-                            scale: { duration: 30, repeat: Infinity, ease: "easeInOut" },
+                            scale: { duration: 30, repeat: Infinity, ease: "easeInOut" }
                         }}
-                        >
-                        <img src={Cloud2} className="w-[300px] sm:w-[350px] md:w-[450px] lg:w-[550px]" alt="Cloud 2" />
-                        </motion.div>
+                    >
+                        <img src={Cloud2} className='w-[300px] sm:w-[350px] md:w-[450px] lg:w-[550px]' alt="Cloud 2" />
+                    </motion.div>
+                </motion.div>
 
-                        {/* Cloud 3 */}
-                        <motion.div
-                        className="absolute bottom-[5%] right-[10%] md:bottom-0 md:right-[14%]"
+                {/* Cloud 3 for mobile devices */}
+                <motion.div className="block large:hidden pointer-events-none absolute inset-0 -z-20"
+                    style={{ background: "transparent" }}
+                    initial={{ x: 300, opacity: 0}}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 1.5, ease: "easeOut", delay: 1 }}
+                    viewport={{ once: true, amount: 0 }}
+                >
+                    <motion.div
+                        className='absolute bottom-[5%] right-[20%] md:bottom-0 md:right-[14%]'
                         initial={{ x: 0, y: 0, scale: 1, rotate: 3 }}
                         animate={{
                             x: [0, 10, 0, -10, 0],
                             y: [0, -10, 0, 10, 0],
-                            scale: [1, 1.15, 1],
+                            scale: [1, 1.15, 1]
                         }}
                         transition={{
                             x: { duration: 60, repeat: Infinity, ease: "easeInOut" },
                             y: { duration: 15, repeat: Infinity, ease: "easeInOut" },
-                            scale: { duration: 30, repeat: Infinity, ease: "easeInOut" },
+                            scale: { duration: 30, repeat: Infinity, ease: "easeInOut" }
                         }}
-                        >
-                        <img src={Cloud3} className="w-[300px] sm:w-[300px] md:w-[400px] lg:w-[500px] large:w-[550px]" alt="Cloud 3" />
-                        </motion.div>
-                        
-                    </div>
-
+                    >
+                        <img src={Cloud3} className='w-[300px] sm:w-[300px] md:w-[400px] lg:w-[500px] large:w-[550px]' alt="Cloud 3" />
+                    </motion.div>
                 </motion.div>
 
                 {/* Home-Arrow */}
@@ -185,61 +324,135 @@ export default HeroSection
 
 
 
-                        // {/* Cloud Wrapper */}
-                        // <div className="pointer-events-none absolute inset-0 -z-20">
-                            
-                        //     {/* Cloud 1 */}
-                        //     <motion.div
-                        //         className='absolute -top-[10%] -left-[5%] large:-left-[15%]'
-                        //         initial={{ x: 0, y: 0, scale: 1 }}
-                        //         animate={{
-                        //             x: [0, 50, 0, -50, 0],
-                        //             y: [0, -10, 0, 10, 0],
-                        //             scale: [1, 1.15, 1]
-                        //         }}
-                        //         transition={{
-                        //             x: { duration: 60, repeat: Infinity, ease: "easeInOut" },
-                        //             y: { duration: 15, repeat: Infinity, ease: "easeInOut" },
-                        //             scale: { duration: 30, repeat: Infinity, ease: "easeInOut" }
-                        //         }}
-                        //     >
-                        //         <img src={Cloud1} className='w-[350px] sm:w-[550px]' alt="Cloud 1" />
-                        //     </motion.div>
 
-                        //     {/* Cloud 2 */}
-                        //     <motion.div
-                        //         className='absolute top-[45%] large:-top-[5%] right-[30%] md:-right-[15%]'
-                        //         initial={{ x: 0, y: 0, scale: 1, rotate: 5 }}
-                        //         animate={{
-                        //             x: [0, 5, 0, -5, 0],
-                        //             y: [0, -10, 0, 10, 0],
-                        //             scale: [1, 1.15, 1]
-                        //         }}
-                        //         transition={{
-                        //             x: { duration: 60, repeat: Infinity, ease: "easeInOut" },
-                        //             y: { duration: 20, repeat: Infinity, ease: "easeInOut" },
-                        //             scale: { duration: 30, repeat: Infinity, ease: "easeInOut" }
-                        //         }}
-                        //     >
-                        //         <img src={Cloud2} className='w-[350px] sm:w-[550px]' alt="Cloud 2" />
-                        //     </motion.div>
 
-                        //     {/* Cloud 3 */}
-                        //     <motion.div
-                        //         className='absolute bottom-0 right-[14%]'
-                        //         initial={{ x: 0, y: 0, scale: 1, rotate: 3 }}
-                        //         animate={{
-                        //             x: [0, 10, 0, -10, 0],
-                        //             y: [0, -10, 0, 10, 0],
-                        //             scale: [1, 1.15, 1]
-                        //         }}
-                        //         transition={{
-                        //             x: { duration: 60, repeat: Infinity, ease: "easeInOut" },
-                        //             y: { duration: 15, repeat: Infinity, ease: "easeInOut" },
-                        //             scale: { duration: 30, repeat: Infinity, ease: "easeInOut" }
-                        //         }}
-                        //     >
-                        //         <img src={Cloud3} className='w-[350px] sm:w-[550px]' alt="Cloud 3" />
-                        //     </motion.div>
-                            
-                        // </div>
+
+
+// {/* Shared Cloud Wrapper */}
+// <div className="block large:hidden pointer-events-none absolute inset-0 -z-20 overflow-hidden large:overflow-visible">
+
+//     {/* Cloud 1 */}
+//     <motion.div
+//         className="absolute top-[5%] -left-[5%] sm:left-[0%] large:-top-[10%] large:-left-[15%]"
+//         initial={{ x: 0, y: 0, scale: 1 }}
+//         animate={{
+//             x: [0, 50, 0, -50, 0],
+//             y: [0, -10, 0, 10, 0],
+//             scale: [1, 1.15, 1],
+//         }}
+//         transition={{
+//             x: { duration: 60, repeat: Infinity, ease: "easeInOut" },
+//             y: { duration: 15, repeat: Infinity, ease: "easeInOut" },
+//             scale: { duration: 30, repeat: Infinity, ease: "easeInOut" },
+//         }}
+//     >
+//         <img src={Cloud1} className="w-[300px] sm:w-[350px] md:w-[450px] lg:w-[550px]" alt="Cloud 1" />
+//     </motion.div>
+
+//     {/* Cloud 2 */}
+//     <motion.div
+//         className="absolute top-[48%] md:top-[50%] large:-top-[5%] -right-[5%] xs:-right-[10%] sm:right-[0%] md:-right-[5%] lg:right-[0%] large:-right-[15%]"
+//         initial={{ x: 0, y: 0, scale: 1, rotate: 5 }}
+//         animate={{
+//             x: [0, 5, 0, -5, 0],
+//             y: [0, -10, 0, 10, 0],
+//             scale: [1, 1.15, 1],
+//         }}
+//         transition={{
+//             x: { duration: 60, repeat: Infinity, ease: "easeInOut" },
+//             y: { duration: 20, repeat: Infinity, ease: "easeInOut" },
+//             scale: { duration: 30, repeat: Infinity, ease: "easeInOut" },
+//         }}
+//     >
+//         <img src={Cloud2} className="w-[300px] sm:w-[350px] md:w-[450px] lg:w-[550px]" alt="Cloud 2" />
+//     </motion.div>
+
+//     {/* Cloud 3 */}
+//     <motion.div
+//         className="absolute bottom-[5%] right-[10%] md:bottom-0 md:right-[14%]"
+//         initial={{ x: 0, y: 0, scale: 1, rotate: 3 }}
+//         animate={{
+//             x: [0, 10, 0, -10, 0],
+//             y: [0, -10, 0, 10, 0],
+//             scale: [1, 1.15, 1],
+//         }}
+//         transition={{
+//             x: { duration: 60, repeat: Infinity, ease: "easeInOut" },
+//             y: { duration: 15, repeat: Infinity, ease: "easeInOut" },
+//             scale: { duration: 30, repeat: Infinity, ease: "easeInOut" },
+//         }}
+//     >
+//         <img src={Cloud3} className="w-[300px] sm:w-[300px] md:w-[400px] lg:w-[500px] large:w-[550px]" alt="Cloud 3" />
+//     </motion.div>
+
+// </div>
+
+
+
+
+
+
+
+
+
+
+
+
+                // {/* Shared Cloud Wrapper */}
+                // <div className="block large:hidden pointer-events-none absolute inset-0 -z-20 overflow-hidden large:overflow-visible">
+
+                //     {/* Cloud 1 */}
+                //     <motion.div
+                //         className="absolute top-[5%] -left-[5%] sm:left-[0%] large:-top-[10%] large:-left-[15%]"
+                //         initial={{ x: 0, y: 0, scale: 1 }}
+                //         animate={{
+                //             x: [0, 50, 0, -50, 0],
+                //             y: [0, -10, 0, 10, 0],
+                //             scale: [1, 1.15, 1],
+                //         }}
+                //         transition={{
+                //             x: { duration: 60, repeat: Infinity, ease: "easeInOut" },
+                //             y: { duration: 15, repeat: Infinity, ease: "easeInOut" },
+                //             scale: { duration: 30, repeat: Infinity, ease: "easeInOut" },
+                //         }}
+                //     >
+                //         <img src={Cloud1} className="w-[300px] sm:w-[350px] md:w-[450px] lg:w-[550px]" alt="Cloud 1" />
+                //     </motion.div>
+
+                //     {/* Cloud 2 */}
+                //     <motion.div
+                //         className="absolute top-[48%] md:top-[50%] large:-top-[5%] -right-[5%] xs:-right-[10%] sm:right-[0%] md:-right-[5%] lg:right-[0%] large:-right-[15%]"
+                //         initial={{ x: 0, y: 0, scale: 1, rotate: 5 }}
+                //         animate={{
+                //             x: [0, 5, 0, -5, 0],
+                //             y: [0, -10, 0, 10, 0],
+                //             scale: [1, 1.15, 1],
+                //         }}
+                //         transition={{
+                //             x: { duration: 60, repeat: Infinity, ease: "easeInOut" },
+                //             y: { duration: 20, repeat: Infinity, ease: "easeInOut" },
+                //             scale: { duration: 30, repeat: Infinity, ease: "easeInOut" },
+                //         }}
+                //     >
+                //         <img src={Cloud2} className="w-[300px] sm:w-[350px] md:w-[450px] lg:w-[550px]" alt="Cloud 2" />
+                //     </motion.div>
+
+                //     {/* Cloud 3 */}
+                //     <motion.div
+                //         className="absolute bottom-[5%] right-[10%] md:bottom-0 md:right-[14%]"
+                //         initial={{ x: 0, y: 0, scale: 1, rotate: 3 }}
+                //         animate={{
+                //             x: [0, 10, 0, -10, 0],
+                //             y: [0, -10, 0, 10, 0],
+                //             scale: [1, 1.15, 1],
+                //         }}
+                //         transition={{
+                //             x: { duration: 60, repeat: Infinity, ease: "easeInOut" },
+                //             y: { duration: 15, repeat: Infinity, ease: "easeInOut" },
+                //             scale: { duration: 30, repeat: Infinity, ease: "easeInOut" },
+                //         }}
+                //     >
+                //         <img src={Cloud3} className="w-[300px] sm:w-[300px] md:w-[400px] lg:w-[500px] large:w-[550px]" alt="Cloud 3" />
+                //     </motion.div>
+
+                // </div>

@@ -271,13 +271,13 @@ const Experience = ({ ExperienceRef_Passed, onScrollToExperience }) => {
                                 }
 
 
-                                {/* Cloud 7 */}
+                                {/* Cloud 7 for desktop devices above 768px */}
                                 {item.key_index === 1 &&
                                     <>
                                         <motion.div
-                                            className="pointer-events-none absolute inset-0 -z-20"
+                                            className="hidden md:block pointer-events-none absolute inset-0 -z-20"
                                             style={{ background: "transparent" }}
-                                            initial={{ x: 600, opacity: 0 }}
+                                            initial={{ x: 300, opacity: 0 }}
                                             whileInView={{ x: 0, opacity: 1 }}
                                             transition={{ duration: 1.5, ease: "easeOut", delay: 0.5 }}
                                             viewport={{ once: true, amount: 0.4 }}
@@ -302,16 +302,16 @@ const Experience = ({ ExperienceRef_Passed, onScrollToExperience }) => {
                                     </>
                                 }
 
-                                {/* Cloud 6 */}
+                                {/* Cloud 6 for desktop devices above 768px */}
                                 {item.key_index === 2 &&
                                     <>
                                         <motion.div
-                                            className="pointer-events-none absolute inset-0 -z-20"
+                                            className="hidden md:block pointer-events-none absolute inset-0 -z-20"
                                             style={{ background: "transparent" }}
-                                            initial={{ x: -600, opacity: 0 }}
+                                            initial={{ x: -500, opacity: 0 }}
                                             whileInView={{ x: 0, opacity: 1 }}
                                             transition={{ duration: 1.5, ease: "easeOut", delay: 0.5 }}
-                                            viewport={{ once: true, amount: 0.4 }}
+                                            viewport={{ once: true, amount: 0.3 }}
                                         >
                                             <motion.div
                                                 className='absolute -bottom-[80px] -left-[140px]'
@@ -328,6 +328,68 @@ const Experience = ({ ExperienceRef_Passed, onScrollToExperience }) => {
                                                 }}
                                             >
                                                 <img src={Cloud6} className='w-[300px]' alt="Cloud 6" />
+                                            </motion.div>
+                                        </motion.div>
+                                    </>
+                                }
+
+                                {/* Cloud 7 for mobile devices below 768px */}
+                                {item.key_index === 1 &&
+                                    <>
+                                        <motion.div
+                                            className="block md:hidden pointer-events-none absolute inset-0 -z-20"
+                                            style={{ background: "transparent" }}
+                                            initial={{ x: 300, opacity: 0 }}
+                                            whileInView={{ x: 0, opacity: 1 }}
+                                            transition={{ duration: 1.5, ease: "easeOut", delay: 0.5 }}
+                                            viewport={{ once: true, amount: 0.1 }}
+                                        >
+                                            <motion.div
+                                                className='absolute -top-[100px] -right-[30px] sm:-right-[20px]'
+                                                initial={{ x: 0, y: 0, scale: 1, rotate: 5, opacity: "90%" }}
+                                                animate={{
+                                                    x: [0, 15, 0, -15, 0],
+                                                    y: [0, -10, 0, 10, 0],
+                                                    scale: [1, 1.15, 1]
+                                                }}
+                                                transition={{
+                                                    x: { duration: 30, repeat: Infinity, ease: "easeInOut" },
+                                                    y: { duration: 15, repeat: Infinity, ease: "easeInOut" },
+                                                    scale: { duration: 30, repeat: Infinity, ease: "easeInOut" }
+                                                }}
+                                            >
+                                                <img src={Cloud7} className='w-[250px] sm:w-[300px]' alt="Cloud 7" />
+                                            </motion.div>
+                                        </motion.div>
+                                    </>
+                                }
+
+                                {/* Cloud 6 for mobile devices below 768px */}
+                                {item.key_index === 2 &&
+                                    <>
+                                        <motion.div
+                                            className="block md:hidden pointer-events-none absolute inset-0 -z-20"
+                                            style={{ background: "transparent" }}
+                                            initial={{ x: -400, opacity: 0 }}
+                                            whileInView={{ x: 0, opacity: 1 }}
+                                            transition={{ duration: 1.5, ease: "easeOut", delay: 1.2 }}
+                                            viewport={{ once: true, amount: 0.1 }}
+                                        >
+                                            <motion.div
+                                                className='absolute -bottom-[110px] -left-[40px]'
+                                                initial={{ x: 0, y: 0, scale: 1, rotate: 15, opacity: "90%" }}
+                                                animate={{
+                                                    x: [0, 15, 0, -15, 0],
+                                                    y: [0, -10, 0, 10, 0],
+                                                    scale: [1, 1.15, 1]
+                                                }}
+                                                transition={{
+                                                    x: { duration: 30, repeat: Infinity, ease: "easeInOut" },
+                                                    y: { duration: 15, repeat: Infinity, ease: "easeInOut" },
+                                                    scale: { duration: 30, repeat: Infinity, ease: "easeInOut" }
+                                                }}
+                                            >
+                                                <img src={Cloud6} className='w-[250px] sm:w-[300px]' alt="Cloud 6" />
                                             </motion.div>
                                         </motion.div>
                                     </>

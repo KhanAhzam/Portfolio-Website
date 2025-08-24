@@ -33,16 +33,16 @@ const About = ({ AboutRef_Passed }) => {
                     transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
                     viewport={{ once: true, amount: 0 }}
                 >
-                    <li className="para1 font-medium text-gray-800 text-lg lg:text-3xl my-8 xs:my-10 px-2 xs:px-4 sm:px-16">
+                    <li className="para1 font-medium text-gray-800 text-lg md:text-2xl lg:text-3xl my-8 xs:my-10 px-2 xs:px-4 sm:px-16">
                         As a passionate Full Stack Developer, I have expertise in writing clean, efficient, and neat code to create stunning web applications that stand out through thoughtful design and polished execution. I'm skilled at turning needs into great results that far exceed expectations.
                     </li>
-                    <li className="para2 font-medium text-gray-800 text-lg lg:text-3xl my-8 xs:my-10 px-2 xs:px-4 sm:px-16">
+                    <li className="para2 font-medium text-gray-800 text-lg md:text-2xl lg:text-3xl my-8 xs:my-10 px-2 xs:px-4 sm:px-16">
                         In terms of experience, I've worked with teams of developers in the past, where I got the chance to exchange ideas and learn from different perspectives. These experiences helped strengthen not just my technical foundation, but also improved my communication, task management, and adaptability in dynamic situations.
                     </li>
-                    <li className="para3 font-medium text-gray-800 text-lg lg:text-3xl my-8 xs:my-10 px-2 xs:px-4 sm:px-16">
+                    <li className="para3 font-medium text-gray-800 text-lg md:text-2xl lg:text-3xl my-8 xs:my-10 px-2 xs:px-4 sm:px-16">
                         As a avid learner, I genuinely enjoy working with other developers, it pushes me beyond my comfort zone and encourages me to grow. Being in a collaborative setting forces me to learn new tools and technologies quickly, adapt to challenges, and grow with every step.
                     </li>
-                    <li className="para4 font-medium text-gray-800 text-lg lg:text-3xl my-8 xs:my-10 px-2 xs:px-4 sm:px-16">
+                    <li className="para4 font-medium text-gray-800 text-lg md:text-2xl lg:text-3xl my-8 xs:my-10 px-2 xs:px-4 sm:px-16">
                         Additionally, I have a strong interest in Data Structures and Algorithms, which I regularly practice using Java to sharpen my logic and problem-solving abilities.
                     </li>
                 </motion.ul>
@@ -86,7 +86,7 @@ const About = ({ AboutRef_Passed }) => {
                     initial={{ x: 300, opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }}
                     transition={{ duration: 1.5, ease: "easeOut", delay: 0.5 }}
-                    viewport={{ once: true, amount: 0.4 }}
+                    viewport={{ once: true, amount: 0.1 }}
                 >
                     <motion.div
                         className='absolute top-[3%] -right-[3%]'
@@ -102,7 +102,7 @@ const About = ({ AboutRef_Passed }) => {
                             scale: { duration: 30, repeat: Infinity, ease: "easeInOut" }
                         }}
                     >
-                        <img src={Cloud10} className='w-[350px]' alt="Cloud 10" />
+                        <img src={Cloud10} className='w-[250px] md:w-[300px] lg:w-[350px]' alt="Cloud 10" />
                     </motion.div>
                 </motion.div>
 
@@ -113,10 +113,10 @@ const About = ({ AboutRef_Passed }) => {
                     initial={{ x: -300, opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }}
                     transition={{ duration: 1.5, ease: "easeOut", delay: 0.5 }}
-                    viewport={{ once: true, amount: 0.4 }}
+                    viewport={{ once: true, amount: 0.1 }}
                 >
                     <motion.div
-                        className='absolute bottom-[5%] -left-[10%]'
+                        className='absolute bottom-[8%] mini_smaller:bottom-[10%] md:bottom-[5%] -left-[20%] md:-left-[10%]'
                         initial={{ x: 0, y: 0, scale: 1, rotate: 5, }}
                         animate={{
                             x: [0, 5, 0, -5, 0],
@@ -129,7 +129,7 @@ const About = ({ AboutRef_Passed }) => {
                             scale: { duration: 30, repeat: Infinity, ease: "easeInOut" }
                         }}
                     >
-                        <img src={Cloud9} className='w-[450px]' alt="Cloud 9" />
+                        <img src={Cloud9} className='w-[300px] sm:w-[350px] md:w-[450px] lg:w-[550px]' alt="Cloud 9" />
                     </motion.div>
                 </motion.div>
 

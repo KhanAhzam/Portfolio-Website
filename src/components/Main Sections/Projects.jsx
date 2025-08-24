@@ -27,7 +27,7 @@ const Projects = ({ ProjectsRef_Passed }) => {
         },
         {
             title: "WeatherNow",
-            img: null, // replace with your image import if available
+            img: Listly, // replace with your image import if available
             desc: "WeatherNow is a live weather dashboard that shows current conditions and forecasts for any location, powered by real-time API data and a responsive design.",
             stack: ["ReactJS", "TailwindCSS", "OpenWeather API"],
             github_link: "https://github.com/your-username/weather-now",
@@ -37,7 +37,7 @@ const Projects = ({ ProjectsRef_Passed }) => {
         },
         {
             title: "BudgetBuddy",
-            img: null, // replace with your image import if available
+            img: Listly, // replace with your image import if available
             desc: "BudgetBuddy helps you track expenses, categorize spending, and visualize your budget trends with intuitive charts and reports.",
             stack: ["ReactJS", "Chart.js", "TailwindCSS"],
             github_link: "https://github.com/your-username/budget-buddy",
