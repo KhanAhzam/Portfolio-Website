@@ -129,7 +129,7 @@ const Navbar = ({ onScrollToAbout_Passed, onScrollToSkills_Passed, onScrollToExp
                         {/* Resume */}
                         <a
                             className="Resume text-white font-bold text-xl"
-                            href="https://drive.google.com/file/d/1aY2xjhcI6xxNbtIFR6Iu2J-iWL3LBzXV/view?usp=sharing"
+                            href="https://drive.google.com/file/d/12HaeqDbWni7-ciHmfH1V478CYjw1JtpR/view?usp=drive_link"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -257,7 +257,7 @@ const Navbar = ({ onScrollToAbout_Passed, onScrollToSkills_Passed, onScrollToExp
                                 {/* Resume */}
                                 <a
                                     className=" text-center text-white font-bold text-lg"
-                                    href="https://drive.google.com/file/d/1aY2xjhcI6xxNbtIFR6Iu2J-iWL3LBzXV/view?usp=sharing"
+                                    href="https://drive.google.com/file/d/12HaeqDbWni7-ciHmfH1V478CYjw1JtpR/view?usp=drive_link"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >

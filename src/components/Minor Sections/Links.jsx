@@ -26,7 +26,7 @@ const iconData = [
         name: "Resume",
         icon1: <FaFile color="white" size={26} />,
         icon2: <FaFile color="white" size={22} />,
-        link: 'https://drive.google.com/file/d/1aY2xjhcI6xxNbtIFR6Iu2J-iWL3LBzXV/view?usp=sharing',
+        link: 'https://drive.google.com/file/d/12HaeqDbWni7-ciHmfH1V478CYjw1JtpR/view?usp=drive_link',
         width: "150px"
     },
     {

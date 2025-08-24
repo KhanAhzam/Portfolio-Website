@@ -56,7 +56,7 @@ const About = ({ AboutRef_Passed }) => {
                     viewport={{ once: true, amount: 0 }}                                // trigger as soon as it appears
                 >
                     <motion.a
-                        href="https://drive.google.com/file/d/1aY2xjhcI6xxNbtIFR6Iu2J-iWL3LBzXV/view?usp=sharing"
+                        href="https://drive.google.com/file/d/12HaeqDbWni7-ciHmfH1V478CYjw1JtpR/view?usp=drive_link"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="bg-black py-3.5 rounded-3xl font-bold text-2xl text-white flex items-center justify-center px-7 leading-tight"
