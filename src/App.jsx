@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { RouterProvider } from 'react-router-dom';
 import router from './router';
 import Splashscreen from "./components/Minor Sections/SplashScreen";
+import { Analytics } from "@vercel/analytics/next";
 
 //Remove below
 import './App.css';
@@ -17,7 +18,13 @@ function App() {
 
   return (
     <>
-      {loading ? <Splashscreen /> : <RouterProvider router={router} />}
+      {loading ?
+        (<Splashscreen />)
+        : <>
+          <RouterProvider router={router} />
+          <Analytics />
+          </>
+      }
       {/* <RouterProvider router={router} /> */}
     </>
   );
